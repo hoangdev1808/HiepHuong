@@ -1,0 +1,64 @@
+section.Cr-banner#home-banner
+	.swiper-container.Cr-banner__slide
+		.swiper-wrapper
+			.swiper-slide
+				a.swiper-inner(href="#")
+					img(src="./assets/banner/b-1.png", alt="")
+				.content
+					h1 Bệnh viện Chợ Rẫy
+					h2 Khám chữa bệnh, nghiên cứu khoa học, đào tạo, chỉ đạo tuyến
+			.swiper-slide
+				a.swiper-inner(href="#")
+					img(src="./assets/banner/b-2.png", alt="")
+				.content
+					h1 Bệnh viện Chợ Rẫy
+					h2 Bệnh viện đa khoa hạng đặc biệt trực thuộc Bộ Y tế
+		a.crolldown(href="#home-1")
+			span.ri-arrow-down-line
+		//- .swiper-button-prev
+		//- .swiper-button-next
+	.Cr-banner__list
+		.container
+			.row
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="")
+							i.ri-calendar-2-line
+							| Lịch 
+							br 
+							|khám bệnh
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="", data-toggle="modal", data-target="#popupKB")
+							i.ri-file-add-line
+							|Đăng ký 
+							br
+							|khám bệnh
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="", data-toggle="modal", data-target="#popupDV")
+							i.ri-pen-nib-fill
+							| Đăng ký 
+							br
+							|khám dịch vụ
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="")
+							i.ri-account-pin-circle-line
+							| Tìm 
+							br
+							|thân nhân
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="", data-toggle="modal", data-target="#popupDV")
+							i.ri-bus-line
+							| Dịch vụ 
+							br
+							|vận chuyển
+				.col-xl-2.col-lg-4.col-md-4.col-sm-4.col-6
+					.item
+						a.nav-link(href="", data-toggle="modal", data-target="#popupYK")
+							i.ri-questionnaire-line
+							| Gợi ý - 
+							br
+							|Hỏi đáp

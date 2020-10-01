@@ -1,0 +1,777 @@
+// ::-webkit-scrollbar-track 
+// 		box-shadow      : inset 0 0 6px rgba(255, 255, 255, 0)
+// 		background-color: rgb(29, 175, 240)
+// 	
+
+// 	::-webkit-scrollbar 
+// 		width           : 5px
+// 		height          : 5px
+// 		background-color: rgb(29, 175, 240)
+// 	
+
+// 	::-webkit-scrollbar-thumb 
+// 		border-radius   : 2.5px
+// 		box-shadow      : inset 0 0 6px rgba(255, 255, 255, 0)
+// 		background-color: #fff
+// 	
+
+body 
+	overflow-x: hidden
+
+	&.disabled 
+		overflow: hidden
+#overlay 
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+
+	background-color: rgba(0, 0, 0, .8)
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 150
+	transition: .3s all ease-in-out
+
+	&.active 
+		opacity: 1
+		visibility: visible
+		pointer-events: visible
+
+.ovh
+	overflow: hidden
+.section 
+	margin-left: auto
+	padding: 30px 0
+
+	@media (min-width: 600px) 
+		padding: 35px 0
+	
+
+	@media (min-width: 768px) 
+		padding: 40px 0
+	
+
+	@media (min-width: 1025px) 
+		padding: 45px 0
+	
+
+	@media (min-width: 1200px) 
+		padding: 50px 0
+	
+
+	@media (min-width: 1438px) 
+		padding: 60px 0
+.block-title 
+	padding-top: 0
+	margin-bottom: 19px
+
+	h2 
+		font-size: 36px
+		
+		font-weight: bold
+		color: #333333
+
+		@media(max-width: 1025px) 
+			font-size: 26px
+		@media(max-width: 991.98px) 
+			font-size: 20px
+	&.blue
+		text-align: center
+		margin-bottom: 30px
+		h2 
+			font-size: 24px
+			
+			color: rgb(1, 168, 227)
+			font-weight: bold
+		@media screen and (max-width: 1025px) 
+			margin-bottom: 15px
+
+	@media screen and (max-width: 1025px) 
+		margin-bottom: 20px
+	
+	.category-nav
+		display: none
+	
+	@media screen and (max-width: 576px) 
+		margin-bottom: 20px
+		flex-wrap: wrap 
+		.category-nav
+			display: flex
+			margin-top: 20px
+			justify-content: space-between
+			align-items: center
+			padding: 10px 30px
+			font-size: 18px
+			font-weight: 700
+			color: #ffffff
+			text-transform: uppercase
+			border-bottom: 1px solid #ffffff
+			background-color: #3361ae
+			width: 100%
+			em 
+				transition: .2s ease-in-out all
+			
+			&.active
+				em
+					transform: rotate(180deg)
+				
+			
+		
+		h1
+			width: 100%
+.pages 
+	margin-left: auto
+	width: 100%
+
+	.modulepager 
+		display: flex
+		align-items: center
+		justify-content: center
+
+		.pagination 
+			padding: 0
+			list-style: none
+
+			li 
+				background-color: rgb(255, 255, 255)
+				width: 38px
+				height: 38px
+				margin-right: 20px
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				transition: ease-in-out all .3s
+				border: solid 1px $main-color
+
+				a 
+					font-size: 18px
+					color: $main-color
+					text-decoration: none
+					font-family: 'Sarabun'
+				
+
+				&:hover 
+					background-color: $main-color
+
+					a 
+						color: #fff
+					
+				
+
+				&.active 
+					background-color: $main-color
+					a 
+						color: #fff
+.tab-panels 
+	ul 
+		padding: 0
+		list-style: none
+		display: flex
+		align-items: center
+
+		li 
+			a 
+				cursor: pointer
+				display: inline-block
+				font-size: 16px
+				
+				color: rgb(153, 153, 153)
+				text-transform: uppercase
+				text-align: left
+				font-weight: 400
+			
+
+			@media(max-width: 991.98px) 
+				width: auto
+			
+		
+
+		&.active 
+			font-size: 16px
+			
+			color: rgb(51, 51, 51)
+			text-transform: uppercase
+			text-align: left
+			font-weight: 500
+			transition: all .3s ease-in-out
+			position: relative
+
+			&::after 
+				position: absolute
+				content: ''
+				width: 100%
+				height: 2px
+				background-color: $main-color
+				left: 0
+				bottom: -1.5px
+			
+		
+	
+
+	.panel 
+		background: #fff
+		padding: 30px
+		display: none
+
+		.panel__title 
+			p 
+				font-size: 18px
+				font-family: "Barlow"
+				color: rgb(51, 51, 51)
+				font-weight: bold
+			
+		
+
+		.panel__slide 
+			position: relative
+
+			.panel-slide 
+				max-width: 1020px
+				margin: 40px auto
+				cursor: pointer
+
+				.panel__img 
+					border: solid 1px rgb(234, 234, 234)
+					background-color: rgb(255, 255, 255)
+					height: 200px
+					display: flex
+					align-items: center
+					text-align: center
+					justify-content: center
+					transition: all .3s ease-in-out
+
+					&:hover 
+						border: solid 1px #0065b3
+						transition: all .3s ease-in-out
+					
+				
+
+				@media(max-width: 991.98px) 
+					max-width: 100%
+
+					.panel__img 
+						max-width: 100%
+					
+				
+			
+		
+
+		.panel__desc 
+			max-width: 1020px
+			margin: 0 auto
+			padding-bottom: 50px
+			text-align: center
+
+			p 
+				font-size: 18px
+				font-weight: 400
+				line-height: 24px
+				font-family: "Barlow"
+				color: rgb(51, 51, 51)
+			
+
+			ul 
+				padding: 0
+				list-style: none
+
+				li 
+					width: 100%
+					display: flex
+					margin-bottom: 16px
+					padding: 0
+
+					p 
+						font-size: 16px
+						color: rgb(51, 51, 51)
+						font-weight: 600
+					
+
+					span 
+						font-size: 16px
+						color: rgb(51, 51, 51)
+					
+				
+			
+		
+
+		.panel__list 
+			max-width: 1020px
+			margin: 0 auto
+			padding: 0 10px
+
+			.item 
+				border: solid 1px rgb(234, 234, 234)
+				width: 256px
+				height: 255px
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 0
+
+				@media screen and (max-width: 1025px) 
+					width: 100%
+				
+			
+
+			@media screen and (max-width: 1025px) 
+				max-width: 100%
+			
+		
+
+		@media(max-width: 991.98px) 
+			padding: 15px
+
+			.panel__slide 
+				.panel-slide 
+					max-width: 100%
+					margin: 10px auto
+				
+			
+
+			.panel__desc 
+				max-width: 100%
+				text-align: justify
+				padding-bottom: 10px
+
+				p 
+					font-size: 14px
+				
+			
+		
+
+		&.active 
+			display: block
+.lcl 
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+
+	&-1 
+		-webkit-line-clamp: 1
+	
+
+	&-2 
+		-webkit-line-clamp: 2
+		
+	&-3 
+		-webkit-line-clamp: 3
+	
+	&-4 
+		-webkit-line-clamp: 4
+@media screen and ( max-width: 1199px)
+	.acc 
+		width: 100%
+		height: auto
+
+		.acc__card 
+			position: relative
+		
+
+		.acc__title 
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			.material-icons 
+				transition: all ease-in-out .3s
+				transform: rotate(0deg)
+				-webkit-transform: rotate(0deg)
+				-moz-transform: rotate(0deg)
+				-ms-transform: rotate(0deg)
+				-o-transform: rotate(0deg)
+			&.active 
+				.material-icons 
+					transform: rotate(180deg)
+					transition: all ease-in-out .3s
+
+		.acc__panel 
+			display: none
+			margin: 0
+
+.nav-wrap
+	width: 100%
+	background-color: #fafafa
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+	.title
+		background-color: #1279d6
+		width: 285px
+		height: 50px
+		padding-left: 20px
+		h3 
+			font-size: 20px
+			
+			color: rgb(255, 255, 255)
+			font-weight: bold
+			text-transform: uppercase
+			line-height: 50px
+	.acnav
+		width: 100%
+		&__list 
+			padding-left: 0
+			margin: 0
+			list-style: none
+			.has-children
+				&.is-open
+					.label
+						span 
+							transform: rotate(180deg)
+							transition: .3s
+							color: #00adef
+						p
+							color: #00adef
+				.label
+					cursor: pointer
+					width: 100%
+					height: 50px
+					padding-left: 20px
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					background: #ffffff
+					p
+						line-height: 50px
+						font-size: 16px
+						
+						color: #333333
+						font-weight: bold
+						text-transform: uppercase
+					span
+						font-size: 20px
+						color: #333333
+						line-height: 50px
+						transform: rotate(0deg)
+						transition: .3s
+					&.active
+						p 
+							color: #00adef
+				.list-level2
+					list-style: none
+					padding-left: 0
+					display: none
+					&.is-open
+						display: clock
+					li
+						.label
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							background: transparent
+							height: 50px
+							a 
+								font-size: 16px
+								
+								color: #333333
+								font-weight: bold
+								line-height: 50px
+							span 
+								line-height: 50px
+							&.active
+								a 
+									color: #00adef
+						&.is-open
+							.label
+								span 
+									transform: rotate(180deg)
+									transition: .3s
+									color: #00adef
+								a 
+									color: #00adef
+						.list-level3
+							list-style: none
+							padding-left: 50px
+							padding-bottom: 20px
+							display: none
+							li
+								margin-bottom: 17px
+								a 
+									font-size: 15px
+									
+									color: #656565
+									font-weight: 400
+								&.active
+									a 
+										color: #00adef
+								&:last-child
+									margin-bottom: 0
+							&.is-open
+								display: clock
+				&.lv-1
+					&:last-child
+						border-top: solid 1px #e1e1e1
+			.nav-item
+				padding: 15px 0
+				border-bottom: solid 1px #e1e1e1
+				a 
+					font-size: 16px
+					
+					color: rgb(0, 173, 239)
+					font-weight: bold
+					text-transform: uppercase
+				&:last-child
+					border-bottom: none
+	&:last-child
+		margin-top: 30px
+		margin-bottom: 30px
+		.acnav
+			padding-bottom: 0
+			&__list 
+				.nav-item
+					padding-left: 20px
+	@media screen and ( max-width: 1238.98px)
+		.title
+			width: 100%
+.product-detail-page,
+.news-detail-page
+	#page-banner
+		display: none
+.section-header
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	width: 100%
+	justify-content: space-between
+	.box-btn
+		margin-bottom: -13px
+		@media screen and ( max-width: 1024px)
+			margin-bottom: 0
+			.btn__viewmore
+				border-bottom: none
+		.block-title
+			margin-bottom: 20px
+.date
+	font-size: 13px
+	color: rgb(153, 153, 153)
+	line-height: 1.538
+	margin-bottom: 15px
+figure
+	overflow: hidden
+	cursor: pointer
+	.img
+		overflow: hidden
+		img 
+			transform: scale(1)
+			transition: .3s
+	&:hover
+		.img
+			img 
+				transform: scale(1.1)
+				transition: .3s
+		figcaption
+			.desc
+				h1,
+				a,
+				p
+					color: $main-color
+.modal
+	.modal-dialog-centered
+		.modal-content
+			width: 600px
+			margin: 0 auto
+			position: relative
+			border: none
+			border-radius: 10px
+			background-color: #f5f5f5
+			padding: 65px 55px
+			padding-top: 40px
+			.modal-header
+				position: absolute
+				top: 0
+				right: 0
+				border: none
+				padding: 0
+				background-color: rgb(0, 106, 167)
+				width: 40px
+				height: 40px
+				border-radius: 0px 10px 0px 0px
+				display: flex
+				align-items: center
+				justify-content: center
+				.close
+					margin: 0
+					display: contents
+					span
+						font-size: 30px
+										
+						color: rgb(255, 255, 255)
+						line-height: 1.2
+						padding-bottom: 10px
+			.modal-body
+				padding: 0
+				.title
+					display: flex
+					align-items: center
+					justify-content: center
+					em
+						font-size: 36px
+						font-family: "remixicon"
+						color: rgb(1, 168, 227)
+						padding-right: 20px
+					p 
+						font-size: 36px
+						font-family: "Sarabun"
+						color: rgb(17, 17, 17)
+						font-weight: bold
+						text-align: center
+				.desc
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+				.wrap-form
+					padding-top: 40px
+					.form-group
+						position: relative
+						span 
+							position: absolute
+							top: 50%
+							transform: translateY(-50%)
+							right: 0
+							padding-top: 7px
+							padding-left: 20px
+							color: red
+							font-family: 'Sarabun', sans-serif
+							font-weight: 400
+							align-items: center
+							&::before
+								position: absolute
+								top: 65%
+								left: 0
+								transform: translateY(-50%)
+								padding-right: 10px
+								content: '\ECA0'
+								font-family: 'remixicon'
+						input
+							border-width: 1px
+							border-color: rgb(224, 224, 224)
+							border-style: solid
+							background-color: rgb(255, 255, 255)
+							width: 500px
+							height: 40px
+							border-radius: 0
+							padding-left: 15px
+							&:placeholder
+								color: #a7a7a7
+						.RadPicker
+							.rcTable 
+								tbody
+									tr
+										td
+											span
+												padding-left: 0
+												&::before
+													display: none
+						textarea
+							border-width: 1px
+							border-color: rgb(224, 224, 224)
+							border-style: solid
+							background-color: rgb(255, 255, 255)
+							width: 500px
+							height: 120px
+							padding-left: 12px
+							&:placeholder
+								color: #a7a7a7
+						select
+							border-width: 1px
+							border-color: rgb(224, 224, 224)
+							border-style: solid
+							background-color: rgb(255, 255, 255)
+							width: 500px
+							height: 40px
+							padding-left: 15px
+							color: #a7a7a7
+
+				.frm-btnwrap
+					width: max-content
+					label
+						display: none
+					.frm-btn 
+						position: relative
+						display: flex
+						align-items: center
+						input
+							margin-bottom: 0
+							width: 150px
+							height: 46px
+							text-align: left
+							border-radius: 0
+							padding: 0 30px
+							font-size: 16px
+							color: rgb(255, 255, 255)
+							font-weight: bold
+							text-transform: uppercase
+							border: none
+							background-color: #01a8e3
+							transition: all ease-in-out .3s
+							justify-content: flex-start
+
+						.frm-btn-reset
+							display: none
+						.material-icons
+							color: #ffffff
+							font-size: 30px
+							margin-left: -50px
+					&:hover
+						input
+							background-image: linear-gradient( 25deg, #01a8e3 0%, #7fd3f1 100%)
+							transition: all ease-in-out .3s
+		@media screen and ( max-width: 767.98px)
+			.modal-content
+				padding: 30px
+				width: 100%
+				.modal-body
+					.title
+						p,
+						.ri-quill-pen-line 
+							font-size: 20px
+						.ri-quill-pen-line 
+							padding-right: 10px
+					.wrap-form
+						.form-group
+							input,
+							textarea,
+							select
+								width: 100%
+						.frm-btnwrap
+							.frm-btn 
+								input
+									width: 150px
+		@media screen and ( max-width: 575px)
+			.modal-content
+				padding: 15px
+	&#popupDV,
+	&#popupKB
+		.modal-dialog-centered
+			.modal-content
+				.modal-body
+					.frm-btnwrap
+						.frm-btn 
+							input
+								width: 210px
+
+#back-to-top
+	position: fixed
+	bottom: 20px
+	right: 5%
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: $main-color
+	z-index: 500
+	line-height: 50px
+	text-align: center
+	cursor: pointer
+	opacity: 0
+	visibility: hidden
+	transition: all ease-in-out .3s
+	&.active
+		opacity: 1
+		visibility: visible
+		transition: all ease-in-out .3s
+	em 
+		color: #ffffff
+		font-size: 18px

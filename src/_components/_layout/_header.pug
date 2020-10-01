@@ -1,0 +1,85 @@
+header.kv-header
+	.container
+		nav
+			.logo
+				a(href="index.html")
+					img(src="./assets/logo.png", alt="")
+			.logo-scroll
+				a(href="index.html")
+					img(src="./assets/logo-scroll.png", alt="")
+			.nav-mobile
+			.toggle-menu
+			.main-nav
+				ul.nav-list
+					li.nav-item.active
+						a.nav-link(href="index.html")
+							em.ri-home-3-line
+					li.nav-item
+						a.nav-link(href="gioi-thieu.html") Giới thiệu
+					li.nav-item
+						a.nav-link(href="chuyen-khoa.html") Chuyên khoa
+					li.nav-item.dropdown
+						a.nav-link(href="javascript:;") Tin tức
+							em.ri-arrow-down-s-line
+						ul.dropdown-menu
+							li.dropdown-item.dropdown
+								a.nav-link(href="javascript:;") Tin tức
+									em.ri-arrow-down-s-line
+								ul.sup-menu
+									li.sup-item
+										a.nav-link(href="") Tin nổi bật
+									li.sup-item
+										a.nav-link(href="") Tin hoạt động bệnh viện
+									li.sup-item
+										a.nav-link(href="") Tin hoạt động ngành
+									li.sup-item
+										a.nav-link(href="") Video
+									li.sup-item
+										a.nav-link(href="") Thông báo
+							li.dropdown-item
+								a.nav-link(href="tuyen-dung.html") Tuyển dụng
+					li.nav-item.dropdown
+						a.nav-link(href="hoat-dong.html") Hoạt động
+							em.ri-arrow-down-s-line
+						ul.dropdown-menu
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Hoạt động đối ngoại
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Đào tạo
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Nghiên cứu khoa học
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Chỉ đạo tuyến
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Công tác xã hội
+							li.dropdown-item
+								a.nav-link(href="hoat-dong-danh-sach.html") Hoạt động đoàn thể
+					li.nav-item
+						a.nav-link(href="trung-tam.html") Trung tâm
+					li.nav-item
+						a.nav-link(href="doi-ngu-bac-si.html") Đội ngũ bác sĩ
+					li.nav-item
+						a.nav-link(href="lien-he.html") Liên hệ
+				.icon
+					#desktop
+						.hotline
+							a.icon(href="tel:0977.010.200")
+								em.ri-phone-line
+							ul
+								li
+									p Hotline cấp cứu
+								li
+									a(href="tel:0977.010.200") 0977.010.200
+						a.search#searchbox(href="javascript:;")
+							em.ri-search-2-line
+						.language
+							button#dropdownMenuButton.dropdown-toggle(type='button', data-toggle='dropdown')
+								a(href="") VN
+							.dropdown-menu
+								a.dropdown-item(href='#') EN
+								a.dropdown-item(href="") VN
+			#search-box
+				.form-group
+					input.form-control(type="text" placeholder="Tìm sản phẩm...")
+					button.searchbutton.btn.btn__search
+						em.material-icons search
