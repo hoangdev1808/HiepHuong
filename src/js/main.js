@@ -1,15 +1,16 @@
 const toggleMenuMobile = () => {
-    $('.toggle-menu').on('click', function () {
+    $('.kv-toggle').on('click', function () {
         $(this).toggleClass('active');
         $(this).siblings('.main-nav').toggleClass('active');
-        $('body').toggleClass('disabled')
+        $('header').toggleClass('active');
+        $('body').toggleClass('disabled');
         $('#overlay').toggleClass('active');
     });
     $('#overlay').on('click', function () {
         $(this).removeClass('active');
         $('body').removeClass('disabled')
         $('.main-nav').removeClass('active');
-        $('.toggle-menu').removeClass('active');
+        $('.kv-toggle').removeClass('active');
     })
 
 };
@@ -310,48 +311,17 @@ function CrMainBanner() {
 //Check banner
 const checkLayoutBanner = () => {
     const pagesBanner = $('#page-banner');
-    const heightHeader = $('header').outerHeight();
+    const widthHeader = $('header').outerWidth();
     const mainBanner = $('#home-banner');
     if (mainBanner.length >= 1) {
-        $('main').css('padding-top', heightHeader)
+        $('main').css('padding-left', widthHeader)
     } else if (pagesBanner.length >= 1) {
-        $('main').css('padding-top', heightHeader)
+        $('main').css('padding-left', widthHeader)
     } else {
-        $('main').css('padding-top', heightHeader);
+        $('main').css('padding-left', widthHeader);
     }
 
 }
-
-// Trang tuyển dụng
-jQuery(document).ready(function ($) {
-    var alterClass = function () {
-        var ww = document.body.clientWidth;
-        if (ww < 1200) {
-            $('.tuyendung-col').removeClass('pr-0');
-        } else if (ww >= 1200) {
-            $('.tuyendung-col').addClass('pr-0');
-        }
-    };
-    $(window).resize(function () {
-        alterClass();
-    });
-    alterClass();
-});
-
-jQuery(document).ready(function ($) {
-    var alterClass = function () {
-        var ww = document.body.clientWidth;
-        if (ww < 1200) {
-            $('.tuyendung-col-2').removeClass('pl-0');
-        } else if (ww >= 1200) {
-            $('.tuyendung-col-2').addClass('pl-0');
-        }
-    };
-    $(window).resize(function () {
-        alterClass();
-    });
-    alterClass();
-});
 
 function MultiLevelAccordiion() {
     $('.label').click(function () {
