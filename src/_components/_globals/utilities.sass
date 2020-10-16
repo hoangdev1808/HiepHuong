@@ -15,12 +15,12 @@
 // 		background-color: #fff
 // 	
 
-body 
+body
 	overflow-x: hidden
 
-	&.disabled 
+	&.disabled
 		overflow: hidden
-#overlay 
+#overlay
 	opacity: 0
 	visibility: hidden
 	pointer-events: none
@@ -34,108 +34,89 @@ body
 	z-index: 99
 	transition: .3s all ease-in-out
 
-	&.active 
+	&.active
 		opacity: 1
 		visibility: visible
 		pointer-events: visible
 
 .ovh
 	overflow: hidden
-.section 
+.kv-section
 	margin-left: auto
-	padding: 30px 0
+	padding: 20px 0
 
-	@media (min-width: 600px) 
+	@media (min-width: 600px)
+		padding: 30px 0
+
+	@media (min-width: 768px)
 		padding: 35px 0
-	
 
-	@media (min-width: 768px) 
-		padding: 40px 0
-	
-
-	@media (min-width: 1025px) 
-		padding: 45px 0
-	
-
-	@media (min-width: 1200px) 
+	@media (min-width: 1025px)
 		padding: 50px 0
-	
 
-	@media (min-width: 1438px) 
+	@media (min-width: 1200px)
+		padding: 55px 0
+
+	@media (min-width: 1438px)
 		padding: 60px 0
-.block-title 
+.kv-title
 	padding-top: 0
-	margin-bottom: 19px
-
-	h2 
-		font-size: 36px
-		
+	margin-bottom: 20px
+	p
+		width: max-content
+		font-size: 3rem
+		font-family: 'Krub', sans-serif
+		color: $main-color
+		text-transform: uppercase
+		margin: 0 auto
+		@media(max-width: 1199px)
+			font-size: 1.8rem
+			font-weight: 600
+		@media(max-width: 991.98px)
+			font-size: 1.25rem
+	h1
+		font-size: 30px
+		color: $main-color
 		font-weight: bold
-		color: #333333
+		@media(max-width: 1199px)
+			font-size: 1.8rem
+		@media(max-width: 991.98px)
+			font-size: 1.1rem
 
-		@media(max-width: 1025px) 
-			font-size: 26px
-		@media(max-width: 991.98px) 
-			font-size: 20px
-	&.blue
-		text-align: center
-		margin-bottom: 30px
-		h2 
-			font-size: 24px
-			
-			color: rgb(1, 168, 227)
-			font-weight: bold
-		@media screen and (max-width: 1025px) 
-			margin-bottom: 15px
-
-	@media screen and (max-width: 1025px) 
-		margin-bottom: 20px
-	
-	.category-nav
-		display: none
-	
-	@media screen and (max-width: 576px) 
-		margin-bottom: 20px
-		flex-wrap: wrap 
-		.category-nav
-			display: flex
-			margin-top: 20px
-			justify-content: space-between
-			align-items: center
-			padding: 10px 30px
-			font-size: 18px
-			font-weight: 700
-			color: #ffffff
-			text-transform: uppercase
-			border-bottom: 1px solid #ffffff
-			background-color: #3361ae
-			width: 100%
-			em 
-				transition: .2s ease-in-out all
-			
-			&.active
-				em
-					transform: rotate(180deg)
-				
-			
-		
-		h1
-			width: 100%
-.pages 
+	&.red
+		p
+			position: relative
+			&::before
+				position: absolute
+				content: ''
+				width: 75px
+				height: 1px
+				left: 50%
+				bottom: 0
+				transform: translateX(-50%)
+				background-color: $red
+		&.left-0
+			p
+				&::before
+					left: 0
+					transform: translateX(0)
+	@media screen and ( max-width: 1024px)
+		margin-bottom: 15px
+.pages
 	margin-left: auto
 	width: 100%
 
-	.modulepager 
+	.modulepager
 		display: flex
 		align-items: center
 		justify-content: center
 
-		.pagination 
+		.pagination
 			padding: 0
 			list-style: none
 
-			li 
-				background-color: rgb(255, 255, 255)
+			li
+				background-color: #e1e1e1
 				width: 38px
 				height: 38px
 				margin-right: 20px
@@ -146,52 +127,46 @@ body
 				transition: ease-in-out all .3s
 				border: solid 1px $main-color
 
-				a 
+				span
 					font-size: 18px
 					color: $main-color
 					text-decoration: none
-					font-family: 'Sarabun'
-				
 
-				&:hover 
+				&:hover
 					background-color: $main-color
-
-					a 
+					span
 						color: #fff
-					
-				
+					a 
+						color: #ffffff
 
-				&.active 
+				&.active
 					background-color: $main-color
-					a 
+					span
 						color: #fff
-.tab-panels 
-	ul 
+.tab-panels
+	ul
 		padding: 0
 		list-style: none
 		display: flex
 		align-items: center
 
-		li 
-			a 
+		li
+			a
 				cursor: pointer
 				display: inline-block
 				font-size: 16px
-				
+
 				color: rgb(153, 153, 153)
 				text-transform: uppercase
 				text-align: left
 				font-weight: 400
-			
 
-			@media(max-width: 991.98px) 
+			@media(max-width: 991.98px)
 				width: auto
-			
-		
 
-		&.active 
+		&.active
 			font-size: 16px
-			
+
 			color: rgb(51, 51, 51)
 			text-transform: uppercase
 			text-align: left
@@ -199,7 +174,7 @@ body
 			transition: all .3s ease-in-out
 			position: relative
 
-			&::after 
+			&::after
 				position: absolute
 				content: ''
 				width: 100%
@@ -207,33 +182,28 @@ body
 				background-color: $main-color
 				left: 0
 				bottom: -1.5px
-			
-		
-	
 
-	.panel 
+	.panel
 		background: #fff
 		padding: 30px
 		display: none
 
-		.panel__title 
-			p 
+		.panel__title
+			p
 				font-size: 18px
 				font-family: "Barlow"
 				color: rgb(51, 51, 51)
 				font-weight: bold
-			
-		
 
-		.panel__slide 
+		.panel__slide
 			position: relative
 
-			.panel-slide 
+			.panel-slide
 				max-width: 1020px
 				margin: 40px auto
 				cursor: pointer
 
-				.panel__img 
+				.panel__img
 					border: solid 1px rgb(234, 234, 234)
 					background-color: rgb(255, 255, 255)
 					height: 200px
@@ -243,66 +213,54 @@ body
 					justify-content: center
 					transition: all .3s ease-in-out
 
-					&:hover 
+					&:hover
 						border: solid 1px #0065b3
 						transition: all .3s ease-in-out
-					
-				
 
-				@media(max-width: 991.98px) 
+				@media(max-width: 991.98px)
 					max-width: 100%
 
-					.panel__img 
+					.panel__img
 						max-width: 100%
-					
-				
-			
-		
 
-		.panel__desc 
+		.panel__desc
 			max-width: 1020px
 			margin: 0 auto
 			padding-bottom: 50px
 			text-align: center
 
-			p 
+			p
 				font-size: 18px
 				font-weight: 400
 				line-height: 24px
 				font-family: "Barlow"
 				color: rgb(51, 51, 51)
-			
 
-			ul 
+			ul
 				padding: 0
 				list-style: none
 
-				li 
+				li
 					width: 100%
 					display: flex
 					margin-bottom: 16px
 					padding: 0
 
-					p 
+					p
 						font-size: 16px
 						color: rgb(51, 51, 51)
 						font-weight: 600
-					
 
-					span 
+					span
 						font-size: 16px
 						color: rgb(51, 51, 51)
-					
-				
-			
-		
 
-		.panel__list 
+		.panel__list
 			max-width: 1020px
 			margin: 0 auto
 			padding: 0 10px
 
-			.item 
+			.item
 				border: solid 1px rgb(234, 234, 234)
 				width: 256px
 				height: 255px
@@ -311,84 +269,75 @@ body
 				justify-content: center
 				padding: 0
 
-				@media screen and (max-width: 1025px) 
+				@media screen and (max-width: 1025px)
 					width: 100%
-				
-			
 
-			@media screen and (max-width: 1025px) 
+			@media screen and (max-width: 1025px)
 				max-width: 100%
-			
-		
 
-		@media(max-width: 991.98px) 
+		@media(max-width: 991.98px)
 			padding: 15px
 
-			.panel__slide 
-				.panel-slide 
+			.panel__slide
+				.panel-slide
 					max-width: 100%
 					margin: 10px auto
-				
-			
 
-			.panel__desc 
+			.panel__desc
 				max-width: 100%
 				text-align: justify
 				padding-bottom: 10px
 
-				p 
+				p
 					font-size: 14px
-				
-			
-		
 
-		&.active 
+		&.active
 			display: block
-.lcl 
+.lcl
 	overflow: hidden
 	display: -webkit-box
 	text-overflow: ellipsis
 	-webkit-box-orient: vertical
 
-	&-1 
+	&-1
 		-webkit-line-clamp: 1
-	
 
-	&-2 
+	&-2
 		-webkit-line-clamp: 2
-		
-	&-3 
+
+	&-3
 		-webkit-line-clamp: 3
-	
-	&-4 
+
+	&-4
 		-webkit-line-clamp: 4
+	&-5
+		-webkit-line-clamp: 5
 @media screen and ( max-width: 1199px)
-	.acc 
+	.acc
 		width: 100%
 		height: auto
 
-		.acc__card 
+		.acc__card
 			position: relative
-		
 
-		.acc__title 
+		.acc__title
 			display: flex
 			align-items: center
 			justify-content: space-between
 
-			.material-icons 
+			.material-icons
 				transition: all ease-in-out .3s
 				transform: rotate(0deg)
 				-webkit-transform: rotate(0deg)
 				-moz-transform: rotate(0deg)
 				-ms-transform: rotate(0deg)
 				-o-transform: rotate(0deg)
-			&.active 
-				.material-icons 
+			&.active
+				.material-icons
 					transform: rotate(180deg)
 					transition: all ease-in-out .3s
 
-		.acc__panel 
+		.acc__panel
 			display: none
 			margin: 0
 
@@ -401,23 +350,23 @@ body
 		width: 285px
 		height: 50px
 		padding-left: 20px
-		h3 
+		h3
 			font-size: 20px
-			
+
 			color: rgb(255, 255, 255)
 			font-weight: bold
 			text-transform: uppercase
 			line-height: 50px
 	.acnav
 		width: 100%
-		&__list 
+		&__list
 			padding-left: 0
 			margin: 0
 			list-style: none
 			.has-children
 				&.is-open
 					.label
-						span 
+						span
 							transform: rotate(180deg)
 							transition: .3s
 							color: #00adef
@@ -435,7 +384,7 @@ body
 					p
 						line-height: 50px
 						font-size: 16px
-						
+
 						color: #333333
 						font-weight: bold
 						text-transform: uppercase
@@ -446,7 +395,7 @@ body
 						transform: rotate(0deg)
 						transition: .3s
 					&.active
-						p 
+						p
 							color: #00adef
 				.list-level2
 					list-style: none
@@ -461,24 +410,24 @@ body
 							justify-content: flex-start
 							background: transparent
 							height: 50px
-							a 
+							a
 								font-size: 16px
-								
+
 								color: #333333
 								font-weight: bold
 								line-height: 50px
-							span 
+							span
 								line-height: 50px
 							&.active
-								a 
+								a
 									color: #00adef
 						&.is-open
 							.label
-								span 
+								span
 									transform: rotate(180deg)
 									transition: .3s
 									color: #00adef
-								a 
+								a
 									color: #00adef
 						.list-level3
 							list-style: none
@@ -487,13 +436,13 @@ body
 							display: none
 							li
 								margin-bottom: 17px
-								a 
+								a
 									font-size: 15px
-									
+
 									color: #656565
 									font-weight: 400
 								&.active
-									a 
+									a
 										color: #00adef
 								&:last-child
 									margin-bottom: 0
@@ -505,9 +454,9 @@ body
 			.nav-item
 				padding: 15px 0
 				border-bottom: solid 1px #e1e1e1
-				a 
+				a
 					font-size: 16px
-					
+
 					color: rgb(0, 173, 239)
 					font-weight: bold
 					text-transform: uppercase
@@ -518,14 +467,14 @@ body
 		margin-bottom: 30px
 		.acnav
 			padding-bottom: 0
-			&__list 
+			&__list
 				.nav-item
 					padding-left: 20px
 	@media screen and ( max-width: 1238.98px)
 		.title
 			width: 100%
-.product-detail-page,
-.news-detail-page
+.product-detail-page
+// .news-detail-page
 	#page-banner
 		display: none
 .section-header
@@ -543,50 +492,48 @@ body
 		.block-title
 			margin-bottom: 20px
 .date
-	font-size: 13px
-	color: rgb(153, 153, 153)
-	line-height: 1.538
+	font-size: 14px
+	color: rgb(102, 102, 102)
 	margin-bottom: 15px
-figure
-	overflow: hidden
-	cursor: pointer
-	.img
+.hover-img
+	figure
 		overflow: hidden
-		img 
-			transform: scale(1)
-			transition: .3s
-	&:hover
+		cursor: pointer
 		.img
-			img 
-				transform: scale(1.1)
+			overflow: hidden
+			img
+				transform: scale(1)
 				transition: .3s
-		figcaption
-			.desc
-				h1,
-				a,
-				p
-					color: $main-color
+		&:hover
+			.img
+				img
+					transform: scale(1.1)
+					transition: .3s
+			figcaption
+				.desc
+					h1,
+					a,
+					p
+						color: $main-color
 .modal
 	.modal-dialog-centered
 		.modal-content
-			width: 600px
+			width: 100%
 			margin: 0 auto
 			position: relative
 			border: none
-			border-radius: 10px
+			border-radius: 0
 			background-color: #f5f5f5
-			padding: 65px 55px
-			padding-top: 40px
+			padding: 50px 25px
 			.modal-header
 				position: absolute
 				top: 0
-				right: 0
+				right: -40px
 				border: none
 				padding: 0
-				background-color: rgb(0, 106, 167)
-				width: 40px
-				height: 40px
-				border-radius: 0px 10px 0px 0px
+				width: 30px
+				height: 30px
+				border-radius: 0
 				display: flex
 				align-items: center
 				justify-content: center
@@ -594,131 +541,40 @@ figure
 					margin: 0
 					display: contents
 					span
-						font-size: 30px
-										
+						position: relative
+						font-size: 0
 						color: rgb(255, 255, 255)
 						line-height: 1.2
 						padding-bottom: 10px
-			.modal-body
-				padding: 0
-				.title
-					display: flex
-					align-items: center
-					justify-content: center
-					em
-						font-size: 36px
-						font-family: "remixicon"
-						color: rgb(1, 168, 227)
-						padding-right: 20px
-					p 
-						font-size: 36px
-						font-family: "Sarabun"
-						color: rgb(17, 17, 17)
-						font-weight: bold
-						text-align: center
-				.desc
-					overflow: hidden
-					text-overflow: ellipsis
-					display: -webkit-box
-					-webkit-line-clamp: 2
-					-webkit-box-orient: vertical
-				.wrap-form
-					padding-top: 40px
-					.form-group
-						position: relative
-						span 
+						&::after
 							position: absolute
 							top: 50%
-							transform: translateY(-50%)
-							right: 0
-							padding-top: 7px
-							padding-left: 20px
-							color: red
-							font-family: 'Sarabun', sans-serif
-							font-weight: 400
-							align-items: center
-							&::before
-								position: absolute
-								top: 65%
-								left: 0
-								transform: translateY(-50%)
-								padding-right: 10px
-								content: '\ECA0'
-								font-family: 'remixicon'
-						input
-							border-width: 1px
-							border-color: rgb(224, 224, 224)
-							border-style: solid
-							background-color: rgb(255, 255, 255)
-							width: 500px
-							height: 40px
-							border-radius: 0
-							padding-left: 15px
-							&:placeholder
-								color: #a7a7a7
-						.RadPicker
-							.rcTable 
-								tbody
-									tr
-										td
-											span
-												padding-left: 0
-												&::before
-													display: none
-						textarea
-							border-width: 1px
-							border-color: rgb(224, 224, 224)
-							border-style: solid
-							background-color: rgb(255, 255, 255)
-							width: 500px
-							height: 120px
-							padding-left: 12px
-							&:placeholder
-								color: #a7a7a7
-						select
-							border-width: 1px
-							border-color: rgb(224, 224, 224)
-							border-style: solid
-							background-color: rgb(255, 255, 255)
-							width: 500px
-							height: 40px
-							padding-left: 15px
-							color: #a7a7a7
+							left: 50%
+							transform: translate(-50%, -50%)
+							content: url('../assets/icons/close.png')
+			.modal-body
+				padding: 0
+				.img
+					width: 100%
+					height: 100%
+					img 
+						width: 100%
+						height: 100%
+				.desc
+					.title
+						font-size: 36px
+						color: $main-color
+						font-weight: bold
+						text-align: center
+						text-transform: uppercase
+						padding-bottom: 12px
+					p 
+						font-size: 16px
+						color: rgb(51, 51, 51)
+						line-height: 22px
+						padding-bottom: 10px
 
-				.frm-btnwrap
-					width: max-content
-					label
-						display: none
-					.frm-btn 
-						position: relative
-						display: flex
-						align-items: center
-						input
-							margin-bottom: 0
-							width: 150px
-							height: 46px
-							text-align: left
-							border-radius: 0
-							padding: 0 30px
-							font-size: 16px
-							color: rgb(255, 255, 255)
-							font-weight: bold
-							text-transform: uppercase
-							border: none
-							background-color: #01a8e3
-							transition: all ease-in-out .3s
-							justify-content: flex-start
 
-						.frm-btn-reset
-							display: none
-						.material-icons
-							color: #ffffff
-							font-size: 30px
-							margin-left: -50px
-					&:hover
-						input
-							background-image: linear-gradient( 25deg, #01a8e3 0%, #7fd3f1 100%)
-							transition: all ease-in-out .3s
 		@media screen and ( max-width: 767.98px)
 			.modal-content
 				padding: 30px
@@ -726,32 +582,13 @@ figure
 				.modal-body
 					.title
 						p,
-						.ri-quill-pen-line 
+						.ri-quill-pen-line
 							font-size: 20px
-						.ri-quill-pen-line 
+						.ri-quill-pen-line
 							padding-right: 10px
-					.wrap-form
-						.form-group
-							input,
-							textarea,
-							select
-								width: 100%
-						.frm-btnwrap
-							.frm-btn 
-								input
-									width: 150px
 		@media screen and ( max-width: 575px)
 			.modal-content
 				padding: 15px
-	&#popupDV,
-	&#popupKB
-		.modal-dialog-centered
-			.modal-content
-				.modal-body
-					.frm-btnwrap
-						.frm-btn 
-							input
-								width: 210px
 
 #back-to-top
 	position: fixed
@@ -759,8 +596,7 @@ figure
 	right: 5%
 	width: 50px
 	height: 50px
-	border-radius: 50%
-	background-color: $main-color
+	background-color: #617798
 	z-index: 500
 	line-height: 50px
 	text-align: center
@@ -772,6 +608,325 @@ figure
 		opacity: 1
 		visibility: visible
 		transition: all ease-in-out .3s
-	em 
+	em
 		color: #ffffff
 		font-size: 18px
+.timeline
+	margin-bottom: 40px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	@media screen and ( max-width: 1024px)
+		margin-bottom: 30px
+	.icon-social
+		ul
+			list-style: none
+			padding-left: 0
+			display: flex
+			li
+				margin-right: 10px
+				a
+					.fab
+						color: #999999
+						font-size: 20px
+.attribute
+	.title
+		font-size: 20px
+		color: $main-color
+		font-weight: bold
+		text-transform: uppercase
+.swiper-button-next,
+.swiper-button-prev
+	border-width: 1px
+	border-color: rgb(225, 225, 225)
+	border-style: solid
+	border-radius: 50%
+	background-color: #f3f3f3
+	width: 38px
+	height: 38px
+	background-image: none
+.swiper-button-next
+	right: -60px
+	text-align: center
+	&::before
+		content: '\e876'
+		font-family: Linearicons-Free
+		color: $main-color
+		font-size: 16px
+		line-height: 38px
+.swiper-button-prev
+	left: -60px
+	text-align: center
+	&::before
+		content: '\e875'
+		font-family: Linearicons-Free
+		color: $main-color
+		font-size: 16px
+		line-height: 38px
+.box-category
+	width: 200px
+	height: 50px
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	line-height: 50px
+	background-color: $main-color
+	p
+		color: #ffffff
+		font-size: 16px
+		font-weight: 600
+	.material-icons
+		color: #ffffff
+		transform: rotate(0deg)
+		transition: .3s
+		&.active
+			transform: rotate(180deg)
+			transition: .3s
+	@media screen and ( max-width: 991px)
+		width: 100%
+	@media screen and ( min-width: 992px)
+		display: none
+.apply-frm 
+	margin: 0 auto
+	padding: 50px 0
+	div 
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		position: relative
+	
+
+	h4 
+		font-size: 36px
+		color: rgb(33, 29, 112)
+		font-weight: bold
+		text-transform: uppercase
+		line-height: 1.2
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 30px
+
+	.col-left 
+		.form-group 
+			width: 50%
+			.label 
+				font-size: 14px
+				font-weight: 400
+				color: #999
+				margin-bottom: 4px
+			
+
+			.fa-exclamation-triangle 
+				top: 50%
+				transform: translateY(-50%)
+				right: 15px
+				color: red
+			
+
+			.form-control 
+				border-width: 1px
+				border-color: rgb(225, 225, 225)
+				border-style: solid
+				background-color: rgb(250, 250, 250)
+				height: 50px;
+				padding-left: 15px
+				border-radius: 0
+				&:focus
+					box-shadow: none
+					outline: none
+			
+		
+	
+
+	.col-right 
+		max-width: 100%
+		textarea 
+			height: 200px
+			width: 100%
+			border: 1px solid #e5e5e5
+			color: #333
+			font-size: 13px
+			padding: 7px 15px
+			border-radius: 0
+			&:focus
+				box-shadow: none
+				outline: none
+		
+
+		.form-group 
+			margin-bottom: 10px
+			padding: 0 10px
+			label 
+				.required 
+					color: red
+
+	.RadUpload 
+		width: 100% !important
+		.ruInputs
+			width: 100%
+			.ruFileWrap 
+				position: relative
+				display: block
+				width: 100%
+				height: 50px
+
+				.ruBrowse,
+				.ruFileInput 
+					background-color: rgb(217, 217, 217)
+					width: 100%
+					height: 50px
+					text-transform: uppercase
+					font-size: 15px
+					display: flex
+					justify-content: center
+					align-items: center
+					border: 0
+
+		.ruDropZone 
+			display: none
+		
+	
+	.frm-btnwrap 
+		padding: 0 10px
+		.frm-btn 
+			width: 160px
+			height: 50px
+			margin-left: auto
+			display: flex
+			align-items: center
+			position: relative
+			input 
+				width: 100%
+				height: 100%
+				background-color: #ffffff
+				color: $main-color
+				font-size: 16px
+				font-weight: 500
+				border: solid 1px $main-color
+			&::before
+				position: absolute
+				top: 50%
+				right: 25%
+				transform: translateY(-50%)
+				font-size: 20px
+				color: $main-color
+				content: '\e87a'
+				font-family: Linearicons-Free
+			&:hover
+				input
+					background-color: $main-color
+					color: #ffffff
+					transition: all ease-in-out .3s
+				&::before
+					color: #ffffff
+					transition: all ease-in-out .3s
+@media screen and ( max-width: 1024px)
+	.fancybox-slide
+		padding: 15px
+	
+	.apply-frm
+		padding: 30px 0
+	
+@media screen and ( max-width: 576px)
+	.apply-frm
+		h4
+			font-size: 14px
+		
+		.col-left 
+			.form-group
+				width: 100%
+			
+		
+		.col-right
+			label 
+				font-size: 14px
+				.required 
+					font-size: 10px
+.search-page
+	padding: 60px 0
+
+	.search-page-top
+		.page-header
+			h1
+				font-size: 36px
+				font-weight: 500
+				color: #333333
+
+				@media(max-width: 1025px)
+					font-size: 26px
+
+		.searchcontrols
+			padding: 30px 0
+
+			.form-inline
+				.form-group
+					width: 100%
+					position: relative
+					.form-control
+						border: solid 1px #a1a1a1
+						width: 100%
+						height: 40px
+						border-radius: 0
+						&:focus
+							box-shadow: none
+
+					.seachpage-btn
+						display: none
+
+	.searchresults
+		.modulepager
+			display: flex
+			align-items: center
+			padding-bottom: 30px
+			&:nth-child(1)
+				display: none
+
+			.pagination
+				padding: 0
+				list-style: none
+
+				li
+					background-color: rgb(255, 255, 255)
+					width: 38px
+					height: 38px
+					margin-right: 20px
+					display: flex
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					transition: ease-in-out all .3s
+
+					a
+						font-size: 18px
+						color: $main-color
+						text-decoration: none
+						width: 100%
+						height: 100%
+						text-align: center
+						line-height: 38px
+
+					&:hover
+						background-color: $main-color
+
+						a
+							color: #fff
+
+					&.active
+						span
+							color: #fff
+							width: 100%
+							height: 100%
+							text-align: center
+							line-height: 38px
+							background-color: $main-color
+	.searchresultlist
+		.searchresult
+			.NeatHtml
+				h3
+					font-size: 18px
+					a
+						font-size: 20px
+						font-weight: 500
+						color: $main-color
+						text-decoration: none

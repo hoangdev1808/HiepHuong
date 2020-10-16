@@ -1,0 +1,18 @@
+section.kv-section.home-3.about-6
+	.container
+		.row
+			.col-xl-3.left
+				.kv-title.red
+					p đối tác đồng hành
+				.desc
+					p Hiệp Hương cam kết là nhà phân phối lớn, uy tín cung cấp sản phẩm chất lượng cao của thương hiệu nổi tiếng, đáp ứng nhu cầu sử dụng của khách hàng, phù hợp với xu thế phát triển của xã hội.
+				a.btn.btn-pageLoad(href="") Xem thêm
+					em.lnr.lnr-arrow-right
+			.col-xl-9.right.pl-120
+				.row
+					-for(i=1; i<13; i++)
+						.item.col
+							.img
+								img(src="./assets/gioithieu/dt-"+i+".png", alt="")
+							span.span-1
+							span.span-2

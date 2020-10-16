@@ -1,35 +1,60 @@
 .kv-header
 	position: fixed
-	z-index: 100
+	z-index: 1000
 	background-color: rgb(255, 255, 255)
 	left: 0px
 	top: 0px
-	width: 220px
+	width: 100px
 	height: 100vh
-	padding: 2.8125rem 1.25rem
+	padding: 2.8125rem .4375rem
 	background-image: url('../assets/header-bg.png')
 	background-repeat: no-repeat
 	background-size: cover
 	transition: all ease-in-out .3s
+	&.active
+		background-color: #ed1c24
+		transition: all ease-in-out .3s
+		background-image: none
+		z-index: 1000
+		nav
+			.kv-logo
+				img
+					filter: brightness(0) invert(1)
+					transition: all ease-in-out .5s
+			.kv-toggle
+				.hamburger-button
+					span
+						background-color: #ffffff
+			.kv-icon
+				.btn-search
+					background-color: #ffffff
+					.material-icons
+						color: #ed1c24
+				.language
+					background-color: #ffffff
+					a
+						color: #ed1c24
+
 	nav
 		width: 100%
+		height: 655px
 		position: relative
 		display: flex
 		flex-direction: column
 		align-items: center
-		space-c
+		justify-content: space-between
 		.kv-logo
-			width: 100px
-			height: 110px
+			width: 80px
+			height: 88px
+			padding: 0 .1875rem
 			margin-bottom: 44px
 			transition: all ease-in-out .3s
-			img 
+			img
 				filter: brightness(1) invert(0)
 				width: 100%
 				height: 100%
-				object-fit: cover
 				transition: all ease-in-out .5s
-		.kv-toggle 
+		.kv-toggle
 			cursor: pointer
 			position: relative
 			padding: 0
@@ -43,8 +68,7 @@
 				position: relative
 				width: 26px
 				transition: .3s all linear
-				margin-right: 13px
-				span 
+				span
 					position: absolute
 					left: 50%
 					transform: translate(-50%, -50%)
@@ -55,16 +79,16 @@
 					transition: .3s all linear
 					&:first-child
 						top: -5px
-					
+
 					&:last-child
 						top: 5px
-			&.active 
+			&.active
 				transition: .3s all linear
 				.hamburger-button
 					span
 						top: 50%
 						left: 50%
-						&:first-child 
+						&:first-child
 							transform: translate(-50%, -50%) rotate(45deg)
 						&:nth-child(2)
 							visibility: hidden
@@ -75,8 +99,8 @@
 			@media(max-width: 576px)
 				width: 40px
 				.hamburger-button
-					+ span 
-						display: none
+				+ span
+					display: none
 		.kv-icon
 			display: flex
 			align-items: center
@@ -88,7 +112,7 @@
 				display: flex
 				align-items: center
 				justify-content: center
-				a 
+				a
 					color: #ffffff
 					font-size: 12px
 				&:hover
@@ -96,34 +120,355 @@
 					border: 1px solid $main-color
 					a
 						color: $main-color
+	.kv-menu
+		position: absolute
+		width: 100vw
+		height: 100vh
+		padding-top: 45px
+		padding-left: 5rem
+		top: 0
+		left: -110vw
+		background-image: url('../assets/mega-bg.png')
+		z-index: -1
+		transition: all ease-in-out .3s
+		.nav-bar
+			width: max-content
+			height: 525px
+			list-style: none
+			padding-top: 5.5rem
+			padding-left: 0
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			.nav-item
+				display: inline-block
+				position: relative
+				transition: all ease-in-out .3s
+				// border-bottom: solid 1px rgba($color: #000000, $alpha: 0.078)
+				// border-top: solid 1px rgba($color: #000000, $alpha: 0.078)
+				.nav-link
+					font-size: 30px
+					font-weight: 700
+					line-height: 50px
+					padding: 0
+					color: #111111
+				&.active
+					transform: translateX(7%)
+					.nav-link
+						color: $main-color
+				@media screen and ( min-width: 1240px)
+					&:hover
+						transform: translateX(7%)
+						transition: all ease-in-out .3s
+						.nav-link
+							color: $main-color
+				&.dropdown
+					position: relative
+					width: 100%
+					&::before
+						opacity: 0
+						visibility: hidden
+						position: absolute
+						top: 50%
+						left: 105%
+						transform: translateY(-50%)
+						content: ''
+						width: 0
+						height: 2px
+						transition: all .3s
+						background-color: #e5e5e5
+					&::after
+						position: absolute
+						content: ''
+						top: 0
+						left: 100%
+						width: 50%
+						height: 100%
+					.dropdown-menu
+						display: none
+						opacity: 0
+						visibility: hidden
+						left: 150%
+						top: -10%
+						border: none
+						padding: 0
+						min-width: auto
+						margin: 0
+						background-color: transparent
+						.dropdown-item
+							padding: 0
+							.nav-link
+								font-size: 20px
+								font-weight: 400
+								color: #666666
+							@media screen and ( min-width: 1240px)
+								&:hover
+									background: none
+									.nav-link
+										color: #ed1c24
+							&.active
+								background-color: transparent
+								.nav-link
+									color: #ed1c24
+									font-weight: 700
+							&.has-sub
+								.sub-menu
+									position: absolute
+									top: 0
+									left: 120%
+									padding-left: 0
+									list-style: none
+									opacity: 0
+									visibility: hidden
+									transition: all .3s
+									li
+										a
+											.kv-img
+												background-color: $main-color
+												box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15)
+												width: 580px
+												height: 365px
+												img
+													width: 100%
+													height: 100%
+													object-fit: cover
+								@media screen and ( min-width: 1240px)
+									&:hover
+										.sub-menu
+											opacity: 1
+											visibility: visible
+											transition: all .3s
+					@media screen and ( min-width: 1240px)
+						&:hover
+							&::before
+								width: 120px
+								opacity: 1
+								visibility: visible
+								transition: all .3s
+							.dropdown-menu
+								display: block
+								opacity: 1
+								visibility: visible
+		.kv-social
+			margin-top: 5.6rem
+			ul
+				padding-left: 0
+				display: flex
+				list-style: none
+				li
+					width: 40px
+					height: 40px
+					margin-right: 5px
+					background-color: $main-color
+					display: flex
+					align-items: center
+					justify-content: center
+					a
+						.fab
+							color: #ffffff
+							font-size: 18px
+							font-weight: 900
+				.hotline
+					background-color: rgba($color: #000000, $alpha: 0.102)
+					width: 180px
+					height: 40px
+					a
+						display: flex
+						align-items: center
+						.material-icons
+							font-size: 18px
+							color: $main-color
+							padding-right: 10px
+						span
+							font-size: 18px
+							font-weight: 700
+							color: rgb(33, 29, 112)
+		&.active
+			left: 0
+			transition: all ease-in-out .3s
+
+	.kv-search
+		position: absolute
+		top: 0
+		left: -100vw
+		width: 30vw
+		height: 100vh
+		padding: 50px
+		transition: all .3s
+		display: flex
+		align-items: center
+		background-color: #ffffff
+		z-index: -2
+		.form-group
+			width: 100%
+			display: flex
+			align-items: center
+			.form-control
+				width: 100%
+				border: none
+				border-bottom: solid 2px $main-color
+				border-radius: 0
+				&:focus
+					box-shadow: none
+					outline: none
+			.btn__search
+				margin-left: -25px
+				.material-icons
+					font-size: 30px
+					color: $main-color
+		&.active
+			left: 100%
+			transition: all .3s
+
+	@media screen and ( max-width: 1366px)
+		nav
+			width: 100%
 		.kv-menu
+			.nav-bar
+				width: max-content
+				.nav-item
+					&.dropdown
+						&:hover
+							&::before
+								width: 60px
+						.dropdown-menu
+							right: -90%
+
+						&.mega
+							.dropdown-menu
+								right: -100%
+								.dropdown-item
+									&.has-sub
+										.sub-menu
+											right: -150%
+											li
+												a
+													.kv-img
+														width: 400px
+														height: auto
+	@media screen and ( max-width: 1240px)
+		width: 100%
+		height: auto
+		padding: 7px 0
+		background-image: none
+		background-color: #ffffff
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08)
+		nav
 			width: 100%
 			height: 100%
-			.nav-bar
-				list-style: none
-				padding-left: 0
-				.nav-item
-					border-bottom: solid 1px rgba($color: #000000, $alpha: 0.078)
-					border-top: solid 1px rgba($color: #000000, $alpha: 0.078)
-					padding-left: 1.25rem
-					.nav-link
-						padding: 1rem 0
-						font-size: 16px
-						color: #111111
+			flex-direction: row
+			justify-content: flex-start
+			.kv-logo
+				width: 50px
+				height: 50px
+				padding: 0
+				margin-bottom: 0
+				order: 1
+			.kv-toggle
+				width: 26px
+				height: 26px
+				order: 3
 
-	&.active
-		background-color: #ed1c24
-		transition: all ease-in-out .3s
-		background-image: none
+			.kv-icon
+				order: 2
+				margin-left: auto
+				margin-right: 20px
+		.kv-menu
+			padding: 30px
+			width: auto
+			height: 100vh
+			overflow-y: auto
+			top: 100%
+			left: unset
+			right: -110vw
+			transition: all ease-in-out .3s
+			&.active
+				left: unset
+				right: 0
+				transition: all ease-in-out .3s
+			.nav-bar
+				width: 100%
+				max-height: 80vh
+				height: 100%
+				padding: 5rem 1rem
+				overflow-y: auto
+				overflow-x: hidden
+				justify-content: unset
+				&::-webkit-scrollbar-track
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: #fafafa
+
+				&::-webkit-scrollbar
+					width: 2px
+					max-height: 2px
+					background-color: #fafafa
+				&::-webkit-scrollbar-thumb
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: $main-color
+				.kv-social
+					margin-top: 2rem
+				.nav-item
+					border-bottom: 1px solid $main-color
+					.nav-link
+						font-weight: 600
+						font-size: 18px
+					&.active
+						transform: unset
+						.nav-link
+							color: $main-color
+					&.dropdown
+						.dropdown-menu
+							width: 100%
+							display: none
+							position: static
+							visibility: visible
+							opacity: 1
+							transition: unset
+							background-color: transparent
+							&::before,
+							&::after
+								display: none
+							.dropdown-item
+								.nav-link
+									font-size: 16px
+								&.has-sub
+									.sub-menu
+										display: none
+			.kv-social
+				margin-top: 1rem
+		.kv-search
+			width: 50vw
+			&.active
+				left: 0
+	@media screen and ( max-width: 1024px)
+		padding: 7px 0
 		nav
 			.kv-logo
-				img 
-					filter: brightness(0) invert(1)
-					transition: all ease-in-out .5s
-			.kv-toggle 
-				.hamburger-button
-					span 
-						background-color: #ffffff
-
-
-
+				width: 30px
+				height: auto
+			.kv-icon
+				.language
+					width: 30px
+					height: 30px
+				.btn-search
+					width: 30px
+					height: 30px
+		.kv-menu
+			width: auto
+			padding: 30px 15px
+			.nav-bar
+				.nav-item
+					.nav-link
+						font-weight: 600
+						font-size: 18px
+					&.dropdown
+						.dropdown-menu
+							.dropdown-item
+								.nav-link
+									font-size: 16px
+	@media screen and ( max-width: 576px)
+		.kv-search
+			width: 80vw
+	@media screen and ( max-width: 376px)
+		.kv-search
+			width: 100vw

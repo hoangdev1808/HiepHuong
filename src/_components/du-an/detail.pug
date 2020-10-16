@@ -1,0 +1,75 @@
+section.kv-section.project-detail
+	.container
+		.kv-title
+			h1 Khu đô thị An Phú Sinh
+		.timeline
+			.icon-social
+				ul
+					li
+						a(href="")
+							em.fab.fa-facebook-square
+					li
+						a(href="")
+							em.fab.fa-instagram
+		.full-content
+			.kv-desc
+				p Dự án Khu đô thị An Phú Sinh do Công ty TNHH MTV Bất động sản Thiên Bút làm chủ đầu tư được UBND tỉnh Quảng Ngãi cấp phép vào tháng 6-2011, có quy mô giai đoạn I gần 43 ha, triển khai xây dựng tại phường Nghĩa Chánh và xã Nghĩa Dũng, thành phố Quảng Ngãi, với tổng vốn đầu tư trên 900 tỉ đồng. Điểm nổi bật của khu đô thị này so với các khu đô thị khác là quy hoạch, thiết kế đầy đủ các tiện ích phục vụ nhu cầu của nhân dân như công viên, trường học, bệnh viện, trung tâm thương mại,…
+			.kv-slide
+				.swiper-container.gallery-top
+					.swiper-wrapper
+						-for(i=1; i<7; i++)
+							.swiper-slide
+								.img
+									img(src="./assets/project/duanct-"+i+".png" alt="")
+				.swiper-container-thumbs.gallery-thumbs
+					.swiper-wrapper
+						-for(i=1; i<7; i++)
+							.swiper-slide
+								.img
+									img(src="./assets/project/duanct-"+i+".png" alt="")
+				.swiper-button-next
+				.swiper-button-prev
+			.attribute
+				p.title Thông tin hạng mục phân phối
+				.desc
+					p Năm 2014 đến nay, Công ty TNHH Hiệp Hương đã cung cấp các thiết bị vệ sinh, phụ kiện phong tắm , các loại gạch ốp lát cho  các chủ hộ tại khu đô An Phú Sinh.
+				a.btn.btn-readmore(href="") Xem thêm
+					em.ri-arrow-down-s-line
+				table
+					tr
+						td
+							|Tên dự án
+						td Khu đô thị An Phú Sinh 
+					tr
+						td
+							|Chủ đầu tư
+						td 
+							|Công ty TNHH MTV Bất động sản Thiên Bút
+					tr
+						td
+							| Vị trí
+						td Phường Nghĩa Chánh và xã Nghĩa Dũng, Quảng Ngãi
+					tr
+						td
+							|Hạng mục phân phối
+						td Cung cấp các thiết bị vệ sinh, phụ kiện phong tắm , các loại gạch ốp lát
+.project-other.kv-section
+	.container
+		.attribute
+			p.title Khu đô thị An Phú Sinh
+		.kv-other
+			.swiper-container
+				.swiper-wrapper
+					- for (i=1; i<7; i++)
+						.swiper-slide
+							figure
+								.img
+									img(src="./assets/project/duan-"+i+".png" alt="")
+								figcaption
+									a(href="du-an-detail.html")
+										h1.title Khu đô thị An Phú Sinh
+										p Cung cấp gạch ốp, lát
+									a.btn.btn-viewmore(href="du-an-detail.html") Xem thêm
+										span.lnr.lnr-arrow-right
+			.swiper-button-next
+			.swiper-button-prev

@@ -14,6 +14,9 @@ import {
 	copyImage
 } from "./copy";
 import {
+	copyFavicon
+} from "./copy";
+import {
 	cleanImage
 } from "./clean";
 
@@ -41,8 +44,9 @@ export const server = () => {
 	], series(sassTask));
 
 	watch([
-		"src/assets/**/**.{svg,png,jpg,speg,gif,jpge,PNG,JPGE,JPG,SVG,GIF,SPEG}"
-	], series(cleanImage, copyImage));
+		"src/assets/**/**.{svg,png,jpg,speg,gif,jpge,PNG,JPGE,JPG,SVG,GIF,SPEG, ico}",
+		"src/favicon.ico"
+	], series(cleanImage, copyImage, copyFavicon));
 
 	watch([
 		"config.json"

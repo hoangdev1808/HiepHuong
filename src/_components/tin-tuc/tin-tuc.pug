@@ -1,0 +1,74 @@
+section.kv-section.news
+	.container
+		.kv-title.red
+			p tin tức
+		.news-nav
+			.box-category
+				p Danh mục
+				em.material-icons expand_more
+			ul
+				li
+					a.nav-link(href="") Tin nội bộ
+				li
+					a.nav-link(href="") Tin khuyễn mãi
+				li
+					a.nav-link(href="") Tin khác
+				li
+					a.nav-link(href="hinh-anh.html") Hình ảnh
+				li
+					a.nav-link(href="video.html") Video
+		.row
+			.col-xl-8.col-lg-6.col-md-6
+				.big-img
+					.item
+						figure
+							.img
+								img(src="./assets/news/n-1.png" alt="")
+							figcaption
+								.date
+									p 01.04.2020
+								.title
+									a(href="tin-tuc-chi-tiet.html") 
+										h1 Trải nghiệm dịch vụ bán hàng uy tín, chất lượng tại Hiệp Hương
+								.desc
+									p Khẳng định uy tín là một trong những nhà phân phối cung cấp thiết bị vệ sinh, gạch ốp lát
+								a.btn.btn-viewmore(href="") Xem thêm
+									span.lnr.lnr-arrow-right
+			.col-xl-4.col-lg-6.col-md-6
+				.small-img
+					.item
+						figure
+							.img
+								img(src="./assets/news/n-2.png" alt="")
+							figcaption
+								.date
+									p 01.04.2020
+								.title
+									a(href="tin-tuc-chi-tiet.html") 
+										h1 Trải nghiệm dịch vụ bán hàng uy tín, chất lượng tại Hiệp Hương
+								a.btn.btn-viewmore(href="") Xem thêm
+									span.lnr.lnr-arrow-right
+			-for(i=3; i<9; i++)
+				.col-xl-4.col-md-6
+					.small-img
+						.item
+							figure
+								.img
+									img(src="./assets/news/n-"+i+".png" alt="")
+								figcaption
+									.date
+										p 01.04.2020
+									.title
+										a(href="tin-tuc-chi-tiet.html") 
+											h1 Nếu muốn chuyển mục đích sử dụng đất, làm ngay trong năm 2019 để giảm chi phí
+									a.btn.btn-viewmore(href="") Xem thêm
+										span.lnr.lnr-arrow-right
+		.pages
+			.modulepager
+				ul.pagination
+					li.active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3

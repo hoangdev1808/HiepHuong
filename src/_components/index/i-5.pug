@@ -1,0 +1,27 @@
+section.kv-section.home-5
+	.container
+		.kv-title.red
+			p dự án nổi bật
+		.project-home
+			.swiper-container.gallery-top
+				.swiper-wrapper
+					-for(i=1; i<6; i++)
+						.swiper-slide
+							.item
+								.img
+									img(src="./assets/index/project-1.png", alt="")
+								.desc
+									a(href="")
+										h1 Khu đô thị An Phú Sinh
+										p Cung cấp gạch ốp, lát
+			.swiper-container.gallery-thumbs
+				.swiper-wrapper
+					-for(i=1; i<6; i++)
+						.swiper-slide
+							.item
+								.img
+									img(src="./assets/index/project-1.png", alt="")
+			a.view-more(href="") Xem tất cả
+				span.lnr.lnr-arrow-right
+
+

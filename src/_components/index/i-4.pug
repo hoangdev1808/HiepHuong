@@ -1,0 +1,59 @@
+section.kv-section.field.home-4
+		.container
+			.row
+				.col-xl-3.col-lg-3
+					.kv-title.red
+						p lĩnh vực hoạt động
+				.col-xl-6.col-lg-9
+					.big-img
+						a(href="" data-toggle="modal", data-target="#popupTT")
+							figure
+								.img
+									img(src="./assets/linhvuc/lv-1.png", alt="")
+								figcaption
+									.logo
+										img(src="./assets/linhvuc/logo-1.png", alt="")
+									.title
+										h1 Hiệp Hương Group
+									.desc
+										p Hiệp Hương - Nhà phân phối VLXD Trang trí Nội thất miền Trung
+									span.lnr.lnr-arrow-right
+				.col-xl-3.col-lg-4.col-md-6
+					.small-img.top
+						a(href="" data-toggle="modal", data-target="#popupTT")
+							figure
+								.img
+									img(src="./assets/linhvuc/lv-2.png", alt="")
+								figcaption
+									.logo
+										img(src="./assets/linhvuc/logo-2.png", alt="")
+									.title
+										h1 Hiệp Hương Group
+				-for(i=1; i<5; i++)
+					.col-xl-3.col-lg-4.col-md-6
+						.small-img
+							a(href="" data-toggle="modal", data-target="#popupTT")
+								figure
+									.img
+										img(src="./assets/linhvuc/lv-"+i+".png", alt="")
+									figcaption
+										.logo
+											img(src="./assets/linhvuc/logo-3.png", alt="")
+										.title
+											h1 Hiệp Hương Group
+// Modal
+#popupTT.modal.fade(tabindex='-1', role='dialog')
+	.modal-dialog.modal-dialog-centered.container(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true')
+			.modal-body 
+				.row
+					.col-xl-6.col-md-6.left
+						.img
+							img(src="./assets/linhvuc/lv-1.png", alt="")
+					.col-xl-6.col-md-6.right
+						.desc
+							h1.title Hiệp Hương  group
+							p Tập đoàn chuyên phân phối vật liệu xây dựng tại miền Trung, Hiệp Hương cung cấp sản phẩm chất lượng cao của thương hiệu nổi tiếng, đáp ứng nhu cầu sử dụng của khách hàng, phù hợp với xu thế phát triển của xã hội

@@ -1,0 +1,32 @@
+section.kv-section.video.images
+	.container
+		.kv-title.red
+			p video
+		.news-nav
+			.box-category
+				p Danh mục
+				em.material-icons expand_more
+			ul
+				li
+					a.nav-link(href="") Tin nội bộ
+				li
+					a.nav-link(href="") Tin khuyễn mãi
+				li
+					a.nav-link(href="") Tin khác
+				li
+					a.nav-link(href="hinh-anh.html") Hình ảnh
+				li
+					a.nav-link(href="video.html") Video
+		.images-list
+			.row
+				-for(i=1; i<10; i++)
+					.col-xl-4.col-md-6
+						a(href="" data-fancybox="iamges" data-src="./assets/news/image-1.png")
+							.image-item
+								.img
+									img(src="./assets/news/image-1.png", alt="")
+								.content
+									.icon
+										img(src="./assets/icons/play.png", alt="")
+									.desc
+										p Album dự án gạch ốp lát

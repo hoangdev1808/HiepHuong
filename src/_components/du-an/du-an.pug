@@ -1,0 +1,44 @@
+section.kv-section.project
+	.container
+		.kv-title.red
+			p dự án
+		.project-filter
+			.filter-mobile
+				p Bộ lọc
+				em.material-icons expand_more
+			.filter-select
+				.name
+					label(for="") tên dự án
+					select(name="")
+						option(value="Dự án 1") Dự án 1
+						option(value="Dự án 2") Dự án 2
+						option(value="Dự án 3") Dự án 3
+				.province
+					label(for="") Tỉnh thành
+					select(name="")
+						option(value="Dự án 1") Dự án 1
+						option(value="Dự án 2") Dự án 2
+						option(value="Dự án 3") Dự án 3
+				.ward
+					label(for="") Quận
+					select(name="")
+						option(value="Dự án 1") Dự án 1
+						option(value="Dự án 2") Dự án 2
+						option(value="Dự án 3") Dự án 3
+		.row 
+			- for (i=1; i<7; i++)
+				.col-xl-4.col-lg-4.col-md-6.col-sm-12.col-12
+					figure
+						.img
+							img(src="./assets/project/duan-"+i+".png", alt="")
+						figcaption
+							a(href="du-an-detail.html")
+								h1.title Khu đô thị An Phú Sinh
+								p Cung cấp gạch ốp, lát
+							a.btn.btn-viewmore(href="du-an-detail.html") Xem thêm
+								span.lnr.lnr-arrow-right
+		.pages
+			.modulepager
+				.pagination
+					a.btn.btn-pageLoad(href="") Xem thêm
+						em.ri-arrow-down-s-line

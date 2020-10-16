@@ -5,6 +5,7 @@
 	.breadcrumb
 		display: flex
 		align-items: center
+		justify-content: center
 		background-color: transparent
 		flex-wrap: wrap
 		padding: 10px 0
@@ -16,19 +17,15 @@
 			display: flex
 			align-items: center
 			a
-				font-size: 14px
-				color: #666666
-				font-weight: 400
-				font-family: Sarabun
-				text-decoration: none
+				font-size: 16px
+				color: rgb(102, 102, 102)
 				@media(max-width: 991.98px)
 					font-size: 10px
-				&.active
-					color: $main-color
+				// &.active
+				// 	color: $red
 			&:hover
 				a
 					color: $main-color
-
 			&:first-child
 				padding-left: 0
 				a
@@ -36,8 +33,9 @@
 					&::after
 						font-family: 'remixicon'
 						font-size: 16px
-						content: "\EE1B"
+						content: "\EE1C"
 						color: #666666
+
 
 		li+li
 			&::before
@@ -45,9 +43,9 @@
 				top: 50%
 				left: -7px
 				transform: translateY(-50%)
-				font-family: Material Icons
-				font-size: 14px
-				content: "chevron_right"
+				font-family: 'remixicon'
+				font-size: 18px
+				content: "\EA6E"
 				color: #666666
 
 	@media(min-width: 768.98px)

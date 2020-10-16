@@ -1,0 +1,23 @@
+section.kv-section.home-6
+	.container
+		.kv-title.red
+			p tin tức
+		.news-slide
+			.swiper-container.news-home
+				.swiper-wrapper
+					-for(i=1; i<4; i++)
+						.swiper-slide
+							.small-img
+								.item
+									figure
+										.img
+											img(src="./assets/news/n-2.png" alt="")
+										figcaption
+											.date
+												p 01.04.2020
+											.title
+												a(href="tin-tuc-chi-tiet.html") 
+													h1 Trải nghiệm dịch vụ bán hàng uy tín, chất lượng tại Hiệp Hương
+											a.btn.btn-viewmore(href="") Xem thêm
+												span.lnr.lnr-arrow-right
+			.swiper-pagination
