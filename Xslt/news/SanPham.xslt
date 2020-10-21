@@ -56,6 +56,9 @@
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
+                            <xsl:attribute name="target">
+                                <xsl:text disable-output-escaping="yes">_blank</xsl:text>
+                            </xsl:attribute>
                             <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
                             <em class="lnr lnr-arrow-right"></em>
                         </a>

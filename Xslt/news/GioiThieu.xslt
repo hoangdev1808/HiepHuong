@@ -168,6 +168,11 @@
     </xsl:template>
     <xsl:template match="News" mode="Thumbs">
         <div class="swiper-slide">
+            <xsl:if test="Isactive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text disable-output-escaping="yes">swiper-slide swiper-slide-thumb-active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <div class="item">
                 <div class="desc">
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>

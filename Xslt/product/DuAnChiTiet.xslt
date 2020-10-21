@@ -52,20 +52,18 @@
                         <div class="swiper-button-prev"></div>
                     </div>
                     <div class="attribute">
-                        <xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
-                        <a class="btn btn-readmore" href="">Xem thêm
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            <em class="ri-arrow-down-s-line"></em>
+                        <div class="desc">
+                            <xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
+                        </div>
+                        <a class="btn btn-readmore">
+                        <xsl:attribute name="href">
+                            <xsl:text disable-output-escaping="yes">javascript:void(0);</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="title">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                        <em class="ri-arrow-down-s-line"></em>
                         </a>
                         <table>
                             <xsl:apply-templates select="/ProductDetail/ProductAttributes"></xsl:apply-templates>
@@ -97,14 +95,22 @@
         <div class="swiper-slide">
             <figure>
                 <div class="img">
-                    <img >
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="Url"></xsl:value-of>
                         </xsl:attribute>
-                        <xsl:attribute name="alt">
+                        <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
-                    </img>
+                        <img >
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                        </img>
+                    </a>
                 </div>
                 <figcaption>
                     <a>
@@ -161,6 +167,11 @@
     </xsl:template>
     <xsl:template match="ProductImages" mode="Thumbs">
         <div class="swiper-slide">
+            <xsl:if test="Isactive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text disable-output-escaping="yes">swiper-slide swiper-slide-thumb-active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <div class="img">
                 <img >
                     <xsl:attribute name="src">

@@ -36,14 +36,22 @@
         <div class="swiper-slide">
             <div class="item">
                 <div class="img">
-                    <img >
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="Url"></xsl:value-of>
                         </xsl:attribute>
-                        <xsl:attribute name="alt">
+                        <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
-                    </img>
+                        <img >
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                        </img>
+                    </a>
                 </div>
                 <div class="desc">
                     <a>
@@ -68,7 +76,7 @@
         <div class="swiper-slide">
             <xsl:if test="Isactive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text disable-output-escaping="yes">swiper-slide swiper-slide-active</xsl:text>
+                    <xsl:text disable-output-escaping="yes">swiper-slide swiper-slide-thumb-active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <div class="item">

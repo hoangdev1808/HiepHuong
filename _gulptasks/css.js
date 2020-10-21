@@ -29,7 +29,6 @@ export const sassTask = () => {
 				order: "concentric-css",
 			})
 		]))
-		.pipe(sourcemap.write("."))
 		.pipe(dest("_dist/css"))
 };
 

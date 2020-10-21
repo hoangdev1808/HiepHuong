@@ -24,7 +24,8 @@
         <li>
             <a>
                 <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
+                    <xsl:text disable-output-escaping="yes">http://preview7201.canhcam.com.vn/gioi-thieu#about-</xsl:text>
+                    <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>

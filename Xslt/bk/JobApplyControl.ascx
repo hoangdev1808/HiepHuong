@@ -15,7 +15,7 @@
                             EnableViewState="false" runat="server" />) --%>
                     </h4>
                     <div class="col-left">
-                        <div class="form-group col-6">
+                        <div class="form-group col-xl-6">
                             <label class="label">
                                 <asp:Literal ID="litPositionLabel" Text="<%$Resources:NewsResources, JobPositionLabel %>"
                                     EnableViewState="false" runat="server" />
@@ -27,7 +27,7 @@
                                 ValidationGroup="jobapply" runat="server" Display="Dynamic" ControlToValidate="txtPosition"
                                 SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-xl-6">
                             <label class="label">
                                 <asp:Literal ID="litFullName" Text="<%$Resources:NewsResources, JobFullNameLabel %>"
                                     EnableViewState="false" runat="server" />
@@ -51,7 +51,7 @@
                                 ValidationGroup="jobapply" runat="server" Display="Dynamic" ControlToValidate="txtAddress"
                                 SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div> --%>
-                        <div class="form-group col-6">
+                        <div class="form-group col-xl-6">
                             <label class="label">
                                 <asp:Literal ID="litEmail" Text="<%$Resources:NewsResources, JobEmailLabel %>" EnableViewState="false"
                                     runat="server" />
@@ -67,7 +67,7 @@
                                 ValidationExpression="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[a-zA-Z]{2,9})$"
                                 SetFocusOnError="true"></asp:RegularExpressionValidator>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-xl-6">
                             <label class="label">
                                 <asp:Literal ID="litPhone" Text="<%$Resources:NewsResources, JobPhoneLabel %>" EnableViewState="false"
                                     runat="server" />
@@ -84,7 +84,7 @@
                         </asp:Panel>
                     </div>
                     <div class="col-right">
-                            <div class="form-group col-12">
+                            <div class="form-group col-xl-12">
                                 <label class="label">
                                     <asp:Literal ID="litMessageLabel" Text="<%$Resources:NewsResources, JobMessageLabel %>"
                                         EnableViewState="false" runat="server" />
@@ -96,7 +96,7 @@
                                     ValidationGroup="jobapply" runat="server" Display="Dynamic" ControlToValidate="txtMessage"
                                     SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
-                            <div class="form-group col attachfile1">
+                            <div class="form-group col col-12 attachfile1">
                                 <label class="label">
                                     <asp:Literal ID="litAttachFile1" Text="<%$Resources:NewsResources, JobAttachFile1Label %>"
                                         EnableViewState="false" runat="server" />
@@ -109,7 +109,7 @@
                                 <div class="clear">
                                 </div>
                             </div>
-                            <div class="form-group col attachfile2">
+                            <div class="form-group col col-12 attachfile2">
                                 <label class="label">
                                     <asp:Literal ID="litAttachFile2" Text="<%$Resources:NewsResources, JobAttachFile2Label %>"
                                         EnableViewState="false" runat="server" />

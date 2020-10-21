@@ -12,42 +12,42 @@
     </xsl:template>
     <xsl:template match="News">
         <div class="col-xl-4 col-md-6">
-            <a>
-                <xsl:attribute name="data-fancybox">
-                    <xsl:text disable-output-escaping="yes">iamges</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="data-src">
-                    <xsl:value-of select="Url" disable-output-escaping="yes"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-                <div class="image-item">
-                    <div class="img">
-                        <img >
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+            <div class="image-item">
+                <div class="img">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a>
+                            <xsl:attribute name="data-fancybox">
+                                <xsl:text disable-output-escaping="yes">iamges</xsl:text>
                             </xsl:attribute>
-                            <xsl:attribute name="alt">
+                            <xsl:attribute name="data-src">
+                                <xsl:value-of select="Url" disable-output-escaping="yes"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="Url"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
-                        </img>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
                             <img src="/Data/Sites/1/skins/default/assets/icons/play.png" alt=""/>
-                        </div>
-                        <div class="desc">
-                            <p>
-                                <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                            </p>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                        </p>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </xsl:template>
 </xsl:stylesheet>

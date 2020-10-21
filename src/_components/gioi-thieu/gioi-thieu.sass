@@ -197,7 +197,7 @@
 				align-items: center
 				justify-content: center
 				padding: 5px
-				&.swiper-slide-active
+				&.swiper-slide-thumb-active
 					.item
 						background-color: $red
 						&::after
@@ -461,6 +461,8 @@
 				text-align: left
 				padding-bottom: 30px
 			@media screen and ( min-width: 375px)
+				overflow-y: auto
+				-webkit-line-clamp: unset
 				p 
 					padding-bottom: 0
 .about-6
