@@ -17,17 +17,17 @@
     </xsl:template>
     <xsl:template match="News" mode="DESC">
         <xsl:if test="position()=1">
-            <div class="kv-title red">
+            <div class="kv-title red" data-aos="fade-right">
                 <p>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                 </p>
             </div>
-            <div class="desc">
+            <div class="desc" data-aos="fade-left">
                 <p>
                     <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
                 </p>
             </div>
-            <a class="btn btn-pageLoad">
+            <a class="btn btn-pageLoad" data-aos="fade-up">
                 <xsl:attribute name="href">
                     <xsl:text disable-output-escaping="yes">/gioi-thieu</xsl:text>
                 </xsl:attribute>
@@ -41,7 +41,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Logo">
         <xsl:if test="position()!=1">
-            <div class="item col">
+            <div class="item col" data-aos="fade-up">
                 <div class="img">
                     <img >
                         <xsl:attribute name="src">

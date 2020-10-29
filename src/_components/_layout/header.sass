@@ -34,21 +34,20 @@
 					background-color: #ffffff
 					a
 						color: #ed1c24
-
 	nav
 		width: 100%
-		height: 655px
+		height: 100%
 		position: relative
 		display: flex
-		flex-direction: column
 		align-items: center
+		flex-direction: column
 		justify-content: space-between
 		.kv-logo
 			width: 80px
 			height: 88px
 			padding: 0 .1875rem
 			margin-bottom: 44px
-			transition: all ease-in-out .3s
+			transition: all ease-in-out .5s
 			img
 				filter: brightness(1) invert(0)
 				width: 100%
@@ -58,47 +57,57 @@
 			cursor: pointer
 			position: relative
 			padding: 0
-			width: 100%
+			width: 50%
 			height: 40px
 			display: flex
 			align-items: center
 			justify-content: center
 			transition: .3s all linear
-			.hamburger-button
-				position: relative
-				width: 26px
-				transition: .3s all linear
-				span
-					position: absolute
-					left: 50%
-					transform: translate(-50%, -50%)
-					width: 26px
-					height: 2px
-					background-color: $main-color
-					content: ""
-					transition: .3s all linear
-					&:first-child
-						top: -5px
-
-					&:last-child
-						top: 5px
+			position: relative
+			span
+				display: block
+				position: absolute
+				height: 5px
+				width: 100%
+				background: $main-color
+				border-radius: 9px
+				opacity: 1
+				left: 0
+				-webkit-transform: rotate(0deg)
+				-moz-transform: rotate(0deg)
+				-o-transform: rotate(0deg)
+				transform: rotate(0deg)
+				transition: .5s ease-in-out
+				&:nth-child(1)
+					top: 0
+				&:nth-child(2),
+				&:nth-child(3)
+					top: 15px
+				&:nth-child(4)
+					top: 30px
 			&.active
-				transition: .3s all linear
-				.hamburger-button
-					span
-						top: 50%
+				span
+					background: #ffffff
+					&:nth-child(1)
+						top: 18px
+						width: 0%
 						left: 50%
-						&:first-child
-							transform: translate(-50%, -50%) rotate(45deg)
-						&:nth-child(2)
-							visibility: hidden
-							opacyti: 0
-							transition: .2s all linear
-						&:last-child
-							transform: translate(-50%, -50%) rotate(-45deg)
+					&:nth-child(2)
+						-webkit-transform: rotate(45deg)
+						-moz-transform: rotate(45deg)
+						-o-transform: rotate(45deg)
+						transform: rotate(45deg)
+					&:nth-child(3)
+						-webkit-transform: rotate(-45deg)
+						-moz-transform: rotate(-45deg)
+						-o-transform: rotate(-45deg)
+						transform: rotate(-45deg)
+					&:nth-child(4)
+						top: 18px
+						width: 0%
+						left: 50%
+
 			@media(max-width: 576px)
-				width: 40px
-				.hamburger-button
 				+ span
 					display: none
 		.kv-icon
@@ -121,29 +130,28 @@
 					a
 						color: $main-color
 	.kv-menu
+		display: flex
+		flex-direction: column
+		justify-content: center
 		position: absolute
 		width: 100vw
-		height: 100vh
-		padding-top: 45px
+		height: 100%
 		padding-left: 5rem
 		top: 0
 		left: -110vw
 		background-image: url('../assets/mega-bg.png')
 		z-index: -1
-		transition: all ease-in-out .3s
+		transition: all ease-in-out 1s
 		.nav-bar
 			width: max-content
-			height: 525px
 			list-style: none
-			padding-top: 5.5rem
 			padding-left: 0
 			display: flex
 			flex-direction: column
-			justify-content: space-between
 			.nav-item
 				display: inline-block
 				position: relative
-				transition: all ease-in-out .3s
+				transition: all ease-in-out .5s
 				// border-bottom: solid 1px rgba($color: #000000, $alpha: 0.078)
 				// border-top: solid 1px rgba($color: #000000, $alpha: 0.078)
 				.nav-link
@@ -285,8 +293,47 @@
 							color: rgb(33, 29, 112)
 		&.active
 			left: 0
-			transition: all ease-in-out .3s
-
+			transition: all ease-in-out 1s
+			.nav-bar
+				.nav-item
+					-webkit-transition: all 0.5s
+					-moz-transition: all 0.5s
+					-o-transition: all 0.5s
+					transition: all 0.5s
+					-webkit-animation-duration: 0.5s
+					animation-duration: 0.5s
+					-webkit-animation-fill-mode: both
+					animation-fill-mode: both
+					-webkit-animation-name: returnToNormal
+					animation-name: returnToNormal
+					&:nth-child(1)
+						animation-delay: .5s
+					&:nth-child(2)
+						animation-delay: .6s
+					&:nth-child(3)
+						animation-delay: .7s
+					&:nth-child(4)
+						animation-delay: .8s
+					&:nth-child(5)
+						animation-delay: .9s
+					&:nth-child(6)
+						animation-delay: 1s
+					&:nth-child(7)
+						animation-delay: 1.1s
+					&:nth-child(8)
+						animation-delay: 1.2s
+			.kv-social
+				-webkit-transition: all 0.5s
+				-moz-transition: all 0.5s
+				-o-transition: all 0.5s
+				transition: all 0.5s
+				-webkit-animation-duration: 0.5s
+				animation-duration: 0.5s
+				-webkit-animation-fill-mode: both
+				animation-fill-mode: both
+				-webkit-animation-name: moveInLeft
+				animation-name: moveInLeft
+				animation-delay: 1.3s
 	.kv-search
 		position: absolute
 		top: 0
@@ -294,7 +341,7 @@
 		width: 30vw
 		height: 100vh
 		padding: 50px
-		transition: all .3s
+		transition: all ease-in-out .7s
 		display: flex
 		align-items: center
 		background-color: #ffffff
@@ -318,7 +365,7 @@
 					color: $main-color
 		&.active
 			left: 100%
-			transition: all .3s
+			transition: all ease-in-out .7s
 
 	@media screen and ( max-width: 1366px)
 		nav
@@ -349,7 +396,7 @@
 	@media screen and ( max-width: 1240px)
 		width: 100%
 		height: auto
-		padding: 7px 0
+		padding: 7px 15px
 		background-image: none
 		background-color: #ffffff
 		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08)
@@ -359,14 +406,13 @@
 			flex-direction: row
 			justify-content: flex-start
 			.kv-logo
-				width: 50px
-				height: 50px
+				width: 80px
+				height: auto
 				padding: 0
 				margin-bottom: 0
 				order: 1
 			.kv-toggle
-				width: 26px
-				height: 26px
+				width: 40px
 				order: 3
 
 			.kv-icon
@@ -381,16 +427,16 @@
 			top: 100%
 			left: unset
 			right: -110vw
-			transition: all ease-in-out .3s
+			transition: all ease-in-out .7s
 			&.active
 				left: unset
 				right: 0
-				transition: all ease-in-out .3s
+				transition: all ease-in-out .7s
 			.nav-bar
 				width: 100%
 				max-height: 80vh
 				height: 100%
-				padding: 5rem 1rem
+				padding: 0 1rem
 				overflow-y: auto
 				overflow-x: hidden
 				justify-content: unset
@@ -441,10 +487,10 @@
 			&.active
 				left: 0
 	@media screen and ( max-width: 1024px)
-		padding: 7px 0
+		padding: 7px 15px
 		nav
 			.kv-logo
-				width: 30px
+				width: 80px
 				height: auto
 			.kv-icon
 				.language
@@ -455,7 +501,7 @@
 					height: 30px
 		.kv-menu
 			width: auto
-			padding: 30px 15px
+			padding: 15px
 			.nav-bar
 				.nav-item
 					.nav-link
@@ -467,6 +513,9 @@
 								.nav-link
 									font-size: 16px
 	@media screen and ( max-width: 576px)
+		nav
+			.kv-logo
+				width: 60px
 		.kv-search
 			width: 80vw
 	@media screen and ( max-width: 376px)

@@ -29,13 +29,12 @@
 		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
 		<div id="wrapper">
 			<header class="kv-header">
-				<div class="container">
 					<nav>
 						<div class="kv-logo">
 							<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 						</div>
 						<div class="kv-toggle">
-							<div class="hamburger-button"><span></span><span></span><span></span></div>
+							<span></span><span></span><span></span><span></span>
 						</div>
 						<div class="kv-icon">
 							<a class="btn btn-search" href="javascript:void(0);"><em
@@ -45,13 +44,11 @@
 					</nav>
 					<div class="kv-menu">
 						<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
-						
-							<portal:modulewrapper id="mdl200" runat="server" configuremoduleid="200" />
+						<portal:modulewrapper id="mdl200" runat="server" configuremoduleid="200" />
 							
 						
 					</div>
 					<portal:modulewrapper id="mdl199" runat="server" configuremoduleid="199" />
-				</div>
 			</header>
 			<main>
 				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">

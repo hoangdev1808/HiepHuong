@@ -555,12 +555,19 @@ function readMore() {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        mobile: false,
+        duration: 2500,
+        offset: 0,
+        delay: 150
+    });
+    AOS.refresh();
     toggleMenuMobile();
     activeHeaderWhenScroll();
     moveNavitem();
     CrMainBanner();
     checkLayoutBanner();
-    MultiLevelAccordiion();
+    // MultiLevelAccordiion();
     searchbox();
     Accordiion();
     Faqs();

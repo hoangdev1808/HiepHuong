@@ -4,18 +4,18 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="kv-title red">
+        <div class="kv-title red" data-aos="fade-down">
             <p>
                 <xsl:value-of select="/ProductList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
             </p>
         </div>
         <div class="project-home">
-            <div class="swiper-container gallery-top">
+            <div class="swiper-container gallery-top" data-aos="fade-left">
                 <div class="swiper-wrapper">
                     <xsl:apply-templates select="/ProductList/Product" mode="ProTop"></xsl:apply-templates>
                 </div>
             </div>
-            <div class="swiper-container gallery-thumbs">
+            <div class="swiper-container gallery-thumbs" data-aos="fade-right">
                 <div class="swiper-wrapper">
                     <xsl:apply-templates select="/ProductList/Product" mode="ProThumbs"></xsl:apply-templates>
                 </div>

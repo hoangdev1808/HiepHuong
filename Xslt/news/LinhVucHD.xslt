@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3">
-                        <div class="kv-title red">
+                        <div class="kv-title red" data-aos="fade-up">
                             <p>
                                 <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
                             </p>
@@ -40,7 +40,7 @@
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
                         <figure>
-                            <div class="img">
+                            <div class="img" data-aos="fade-left">
                                 <img >
                                     <xsl:attribute name="src">
                                         <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -50,14 +50,14 @@
                                     </xsl:attribute>
                                 </img>
                             </div>
-                            <figcaption>
+                            <figcaption data-aos="fade-right">
                                 <xsl:apply-templates select="NewsImages"></xsl:apply-templates>
-                                <div class="title">
+                                <div class="title" data-aos="fade-down">
                                     <h1>
                                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                                     </h1>
                                 </div>
-                                <div class="desc lcl lcl-3">
+                                <div class="desc lcl lcl-3" data-aos="fade-up">
                                     <p>
                                         <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
                                     </p>
@@ -87,7 +87,7 @@
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
                         <figure>
-                            <div class="img">
+                            <div class="img" data-aos="fade-down">
                                 <img >
                                     <xsl:attribute name="src">
                                         <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -97,10 +97,10 @@
                                     </xsl:attribute>
                                 </img>
                             </div>
-                            <figcaption>
+                            <figcaption data-aos="fade-up">
                                 <xsl:apply-templates select="NewsImages"></xsl:apply-templates>
                                 <div class="title">
-                                    <h1>
+                                    <h1 data-aos="fade-up">
                                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                                     </h1>
                                 </div>
@@ -113,7 +113,7 @@
     </xsl:template>
     <xsl:template match="NewsImages">
         <xsl:if test="position()!=1">
-            <div class="logo">
+            <div class="logo" data-aos="fade-down">
                 <img >
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>

@@ -6,7 +6,7 @@
     <xsl:template match="/">
         <section class="kv-section home-2">
             <div class="container">
-                <div class="kv-title red">
+                <div class="kv-title red" data-aos="fade-down">
                     <p>
                         <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
                     </p>
@@ -18,7 +18,7 @@
     <xsl:template match="News">
         <div class="pro-item">
             <div class="row">
-                <div class="col-xl-7 col-md-12 left">
+                <div class="col-xl-7 col-md-12 left" data-aos="fade-right">
                     <div class="img">
                         <img >
                             <xsl:attribute name="src">
@@ -30,7 +30,7 @@
                         </img>
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-12 right">
+                <div class="col-xl-5 col-md-12 right" data-aos="fade-left">
                     <div class="content">
                         <h1 class="title">
                             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>

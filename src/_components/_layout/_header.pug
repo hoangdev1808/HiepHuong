@@ -1,103 +1,102 @@
 header.kv-header
-	.container
-		nav
-			.kv-logo
-				a(href="index.html")
-					img(src="../assets/logo.png", alt="")
-			.kv-toggle
-				.hamburger-button
-					span
-					span
-					span
-			.kv-icon
-				a.btn.btn-search(href="javascript:void(0);")
-					em.material-icons search
-				.language
-					a(href="") EN
-		.kv-menu
-			ul.nav-bar
-				li.nav-item
-					a.nav-link(href="/") Trang chủ
-				li.nav-item
-					a.nav-link(href="gioi-thieu.html") Giới thiệu
-				li.nav-item.dropdown
-					a.nav-link(href="linh-vuc-hoat-dong.html") Lĩnh vực hoạt động
-					ul.dropdown-menu
-						li.dropdown-item.active
-							a.nav-link(href="linh-vuc-hoat-dong.html") Hiệp Hương
-						li.dropdown-item
-							a.nav-link(href="linh-vuc-hoat-dong.html") Hiệp Hương Plaza
-						li.dropdown-item
-							a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Logistic
-						li.dropdown-item
-							a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Steel
-						li.dropdown-item
-							a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Cement
-						li.dropdown-item
-							a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Land
-				li.nav-item.dropdown.mega
-					a.nav-link(href="javascript:void(0);") Sản phẩm
-					ul.dropdown-menu
-						li.dropdown-item.has-sub
-							a.nav-link(href="") Thiết bị vệ sinh
-							ul.sub-menu
-								li
-									a(href="")
-										.kv-img
-											img(src="./assets/megamenu_sanpham.png", alt="")
-						li.dropdown-item.has-sub
-							a.nav-link(href="") Gạch ốp lát
-							ul.sub-menu
-								li
-									a(href="")
-										.kv-img
-											img(src="./assets/megamenu_sanpham.png", alt="")
-						li.dropdown-item.has-sub
-							a.nav-link(href="") Ngói
-							ul.sub-menu
-								li
-									a(href="")
-										.kv-img
-											img(src="./assets/megamenu_sanpham.png", alt="")
-						li.dropdown-item.has-sub
-							a.nav-link(href="") Thương hiệu nhập khẩu
-							ul.sub-menu
-								li
-									a(href="")
-										.kv-img
-											img(src="./assets/megamenu_sanpham.png", alt="")
-						li.dropdown-item.has-sub
-							a.nav-link(href="") Phụ kiện nhà bếp
-							ul.sub-menu
-								li
-									a(href="")
-										.kv-img
-											img(src="./assets/megamenu_sanpham.png", alt="")
-				li.nav-item
-					a.nav-link(href="du-an.html") Dự án
-				li.nav-item
-					a.nav-link(href="tin-tuc.html") Tin tức
-				li.nav-item
-					a.nav-link(href="tuyen-dung.html") Tuyển dụng
-				li.nav-item
-					a.nav-link(href="lien-he.html") Liên hệ
-				.kv-social
-					ul
-						li 
-							a(href="")
-								em.fab.fa-facebook-square
-						li
-							a(href="")
-								em.fab.fa-instagram
-						li
-							a(href="")
-								em.fab.fa-youtube
-						li.hotline
-							a(href="")
-								em.material-icons call
-								span 0914 765 775
-		.kv-search
-			.form-group
-				input.form-control(type="text" placeholder="Tìm sản phẩm...")
-				button.searchbutton.btn.btn__search
-					em.material-icons search
+	nav
+		.kv-logo
+			a(href="index.html")
+				img(src="../assets/logo.png", alt="")
+		.kv-toggle
+			span
+			span
+			span
+			span
+		.kv-icon
+			a.btn.btn-search(href="javascript:void(0);")
+				em.material-icons search
+			.language
+				a(href="") EN
+	.kv-menu
+		ul.nav-bar
+			li.nav-item
+				a.nav-link(href="/") Trang chủ
+			li.nav-item
+				a.nav-link(href="gioi-thieu.html") Giới thiệu
+			li.nav-item.dropdown
+				a.nav-link(href="linh-vuc-hoat-dong.html") Lĩnh vực hoạt động
+				ul.dropdown-menu
+					li.dropdown-item.active
+						a.nav-link(href="linh-vuc-hoat-dong.html") Hiệp Hương
+					li.dropdown-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Hiệp Hương Plaza
+					li.dropdown-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Logistic
+					li.dropdown-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Steel
+					li.dropdown-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Cement
+					li.dropdown-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Toàn Thắng Land
+			li.nav-item.dropdown.mega
+				a.nav-link(href="javascript:void(0);") Sản phẩm
+				ul.dropdown-menu
+					li.dropdown-item.has-sub
+						a.nav-link(href="") Thiết bị vệ sinh
+						ul.sub-menu
+							li
+								a(href="")
+									.kv-img
+										img(src="./assets/megamenu_sanpham.png", alt="")
+					li.dropdown-item.has-sub
+						a.nav-link(href="") Gạch ốp lát
+						ul.sub-menu
+							li
+								a(href="")
+									.kv-img
+										img(src="./assets/megamenu_sanpham.png", alt="")
+					li.dropdown-item.has-sub
+						a.nav-link(href="") Ngói
+						ul.sub-menu
+							li
+								a(href="")
+									.kv-img
+										img(src="./assets/megamenu_sanpham.png", alt="")
+					li.dropdown-item.has-sub
+						a.nav-link(href="") Thương hiệu nhập khẩu
+						ul.sub-menu
+							li
+								a(href="")
+									.kv-img
+										img(src="./assets/megamenu_sanpham.png", alt="")
+					li.dropdown-item.has-sub
+						a.nav-link(href="") Phụ kiện nhà bếp
+						ul.sub-menu
+							li
+								a(href="")
+									.kv-img
+										img(src="./assets/megamenu_sanpham.png", alt="")
+			li.nav-item
+				a.nav-link(href="du-an.html") Dự án
+			li.nav-item
+				a.nav-link(href="tin-tuc.html") Tin tức
+			li.nav-item
+				a.nav-link(href="tuyen-dung.html") Tuyển dụng
+			li.nav-item
+				a.nav-link(href="lien-he.html") Liên hệ
+		.kv-social
+			ul
+				li 
+					a(href="")
+						em.fab.fa-facebook-square
+				li
+					a(href="")
+						em.fab.fa-instagram
+				li
+					a(href="")
+						em.fab.fa-youtube
+				li.hotline
+					a(href="")
+						em.material-icons call
+						span 0914 765 775
+	.kv-search
+		.form-group
+			input.form-control(type="text" placeholder="Tìm sản phẩm...")
+			button.searchbutton.btn.btn__search
+				em.material-icons search
