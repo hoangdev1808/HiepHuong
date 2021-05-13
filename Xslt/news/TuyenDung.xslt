@@ -6,14 +6,14 @@
     <xsl:template match="/">
         <section class="kv-section list-tabel">
             <div class="container">
-                <div class="kv-title red">
+                <div class="kv-title red" data-aos="fade-up">
                     <p>
                         <xsl:value-of select="NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
                     </p>
                 </div>
-                <table>
+                <table data-aos="fade-down">
                     <thead>
-                        <tr>
+                        <tr data-aos="fade-up">
                             <th>STT</th>
                             <th>Vị trí ứng tuyển</th>
                             <th>Khu vực</th>
@@ -32,7 +32,7 @@
         </section>
     </xsl:template>
     <xsl:template match="News" mode="DeskTop">
-        <tr>
+        <tr data-aos="fade-left">
             <td>
                 <xsl:if test="position()&lt;10">
                     <xsl:text>0</xsl:text>

@@ -4,12 +4,12 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="kv-title red">
+        <div class="kv-title red" data-aos="fade-down">
             <p>
                 <xsl:value-of select="/ZoneList/Title" disable-output-escaping="yes"></xsl:value-of>
             </p>
         </div>
-        <div class="news-nav">
+        <div class="news-nav" data-aos="fade-up">
             <div class="box-category">
                 <p>Danh mục</p>
                 <em class="material-icons">expand_more</em>

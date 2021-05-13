@@ -16,7 +16,7 @@
                 <div class="big-img">
                     <div class="item">
                         <figure>
-                            <div class="img">
+                            <div class="img" data-aos="fade-right">
                                 <a>
                                     <xsl:attribute name="href">
                                         <xsl:value-of select="Url"></xsl:value-of>
@@ -34,7 +34,7 @@
                                     </img>
                                 </a>
                             </div>
-                            <figcaption>
+                            <figcaption data-aos="fade-left">
                                 <div class="date">
                                     <p>
                                         <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
@@ -76,7 +76,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Small-img">
         <xsl:if test="position()=2">
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up">
                 <div class="small-img">
                     <div class="item">
                         <figure>
@@ -137,7 +137,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Small-img-2">
         <xsl:if test="position()&gt;3 and position()&lt;9">
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-6" data-aos="fade-up">
                 <div class="small-img">
                     <div class="item">
                         <figure>

@@ -103,7 +103,7 @@
                         <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
-                        <div class="kv-img">
+                        <!-- <div class="kv-img">
                             <img >
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -112,7 +112,7 @@
                                     <xsl:value-of select="Title"></xsl:value-of>
                                 </xsl:attribute>
                             </img>
-                        </div>
+                        </div> -->
                     </a>
                 </li>
             </ul>

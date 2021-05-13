@@ -25,13 +25,13 @@
                     <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="kv-title red">
+                    <div class="kv-title red" data-aos="fade-down">
                         <p>
                             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                         </p>
                     </div>
                     <div class="history-slide">
-                        <div class="thumbs">
+                        <div class="thumbs" data-aos="fade-left">
                             <div class="swiper-container gallery-thumbs">
                                 <div class="swiper-wrapper">
                                     <xsl:apply-templates select="News" mode="Thumbs"></xsl:apply-templates>
@@ -40,7 +40,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="swiper-container gallery-top">
+                        <div class="swiper-container gallery-top" data-aos="fade-right">
                             <div class="swiper-wrapper">
                                 <xsl:apply-templates select="News" mode="Top"></xsl:apply-templates>
                             </div>
@@ -56,7 +56,7 @@
                     <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="kv-title red">
+                    <div class="kv-title red" data-aos="fade-up">
                         <p>
                             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                         </p>
@@ -74,7 +74,7 @@
                     <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
                 </xsl:attribute>
                 <div class="container">
-                    <div class="kv-title red">
+                    <div class="kv-title red" data-aos="fade-up">
                         <p>
                             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                         </p>
@@ -108,18 +108,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-3">
-                            <div class="kv-title red">
+                            <div class="kv-title red" data-aos="fade-left">
                                 <p>
                                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                                 </p>
                             </div>
-                            <div class="desc">
+                            <div class="desc" data-aos="fade-up">
                                 <p>
                                     <xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-xl-9 pl-120">
+                        <div class="col-xl-9 pl-120" data-aos="fade-down">
                             <div class="row">
                                 <xsl:apply-templates select="News" mode="DoiTac"></xsl:apply-templates>
                             </div>
@@ -130,15 +130,15 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="TongQuan">
-        <div class="kv-title red">
+        <div class="kv-title red" data-aos="fade-up">
             <p>
                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             </p>
         </div>
-        <div class="desc">
+        <div class="desc" data-aos="fade-right">
             <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
         </div>
-        <div class="img-popup">
+        <div class="img-popup" data-aos="fade-up">
             <img >
                 <xsl:attribute name="src">
                     <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -209,7 +209,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="TamNhin">
-        <div class="col-xl-6">
+        <div class="col-xl-6" data-aos="fade-up">
             <div class="item">
                 <figure>
                     <div class="img">
@@ -260,7 +260,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="GiaTri">
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-3 col-sm-6" data-aos="fade-up">
             <div class="item">
                 <figure>
                     <div class="img">
@@ -285,7 +285,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News" mode="PhatTrien">
-        <div class="col-xl-6">
+        <div class="col-xl-6" data-aos="fade-right">
             <div class="img">
                 <img >
                     <xsl:attribute name="src">
@@ -297,14 +297,14 @@
                 </img>
             </div>
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-6" data-aos="fade-left">
             <div class="content">
-                <div class="kv-title red">
+                <div class="kv-title red" data-aos="fade-up">
                     <p>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                     </p>
                 </div>
-                <div class="desc lcl lcl-5">
+                <div class="desc lcl lcl-5" data-aos="fade-left">
                     <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
                 </div>
                 <a class="btn btn-pageLoad">

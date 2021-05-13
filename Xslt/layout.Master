@@ -29,26 +29,25 @@
 		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
 		<div id="wrapper">
 			<header class="kv-header">
-					<nav>
-						<div class="kv-logo">
-							<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
-						</div>
-						<div class="kv-toggle">
-							<span></span><span></span><span></span><span></span>
-						</div>
-						<div class="kv-icon">
-							<a class="btn btn-search" href="javascript:void(0);"><em
-									class="material-icons">search</em></a>
-							<portal:modulewrapper id="mdl198" runat="server" configuremoduleid="198" />
-						</div>
-					</nav>
-					<div class="kv-menu">
-						<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
-						<portal:modulewrapper id="mdl200" runat="server" configuremoduleid="200" />
-							
-						
+				<nav>
+					<div class="kv-logo">
+						<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 					</div>
-					<portal:modulewrapper id="mdl199" runat="server" configuremoduleid="199" />
+					<div class="kv-toggle">
+						<span></span><span></span><span></span><span></span>
+					</div>
+					<div class="kv-icon">
+						<a class="btn btn-search" href="javascript:void(0);"><em class="material-icons">search</em></a>
+						<portal:modulewrapper id="mdl198" runat="server" configuremoduleid="198" />
+					</div>
+				</nav>
+				<div class="kv-menu">
+					<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
+					<portal:modulewrapper id="mdl200" runat="server" configuremoduleid="200" />
+
+
+				</div>
+				<portal:modulewrapper id="mdl199" runat="server" configuremoduleid="199" />
 			</header>
 			<main>
 				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
@@ -86,7 +85,7 @@
 						<div class="row">
 							<div class="col-xl-12 p-0">
 								<div class="footer-title">
-									<h1>công ty tnhh hiệp hương</h1>
+									<portal:ModuleWrapper ID="mdl206" runat="server" ConfigureModuleId="206" />
 								</div>
 							</div>
 							<div class="col-xl-9 col-lg-9">

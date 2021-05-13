@@ -67,14 +67,14 @@ function moveNavitem() {
 function CrMainBanner() {
     var swiperhomebanner = new Swiper('.kv-banner__slide', {
         loop: true,
-        speed: 1000,
+        speed: 4000,
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
         keyboardControl: true,
         effect: 'fade',
         autoplay: {
-            delay: 3500,
+            delay: 8000,
             disableOnInteraction: false,
         },
         navigation: {
@@ -556,6 +556,7 @@ function readMore() {
 }
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
+        once: true,
         mobile: false,
         duration: 2500,
         offset: 0,

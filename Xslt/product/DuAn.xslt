@@ -22,7 +22,7 @@
         </div>
     </xsl:template>
     <xsl:template match="Product">
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12" data-aos="fade-up">
             <figure>
                 <div class="img">
                     <img >

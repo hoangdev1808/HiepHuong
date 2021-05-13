@@ -8,13 +8,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 col-lg-12 col-md-12 col-12">
-                        <div class="kv-title">
+                        <div class="kv-title" data-aos="fade-down">
                             <h1>
                                 <xsl:value-of select="/NewsDetail/Title" disable-output-escaping="yes"></xsl:value-of>
                                 <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </h1>
                         </div>
-                        <div class="timeline">
+                        <div class="timeline" data-aos="fade-up">
                             <div class="icon-social">
                                 <ul>
                                     <li>
@@ -33,7 +33,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="box-apply">
+                            <div class="box-apply" data-aos="fade-left">
                                 <a class="btn btn__down" href="">Tải mẫu đơn ứng tuyển</a>
                                 <a class="btn btn__apply">
                                     <xsl:attribute name="data-type">
@@ -59,7 +59,7 @@
                         <!-- <xsl:apply-templates select="/NewsDetail/NewsAttributes"></xsl:apply-templates> -->
                     </div>
                     <div class="col-xl-3 col-lg-12 col-md-12 col-12">
-                        <div class="sidebar">
+                        <div class="sidebar" data-aos="fade-down">
                             <div class="sidebar-title">
                                 <p>Thông tin liên hệ</p>
                                 <span>Người liên hệ: Ms. Loan</span>
@@ -86,7 +86,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="sidebar">
+                        <div class="sidebar" data-aos="fade-up">
                             <div class="sidebar-title">
                                 <p>công việc tương tự</p>
                             </div>
@@ -100,7 +100,7 @@
         </section>
     </xsl:template>
     <xsl:template match="NewsAttributes">
-        <div class="attribute">
+        <div class="attribute" data-aos="fade-up">
             <p class="title">
                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             </p>
@@ -108,7 +108,7 @@
         </div>
     </xsl:template>
     <xsl:template match="NewsOther">
-        <li>
+        <li data-aos="fade-right">
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url" disable-output-escaping="yes"></xsl:value-of>

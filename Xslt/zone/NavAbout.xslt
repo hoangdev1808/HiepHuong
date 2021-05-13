@@ -4,7 +4,7 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="about-nav">
+        <div class="about-nav" data-aos="fade-down">
             <div class="container">
                 <div class="categroly">
                     <div class="box-category">

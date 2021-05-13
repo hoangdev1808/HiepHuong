@@ -6,12 +6,12 @@
     <xsl:template match="/">
         <section class="kv-section project-detail">
             <div class="container">
-                <div class="kv-title">
+                <div class="kv-title" data-aos="fade-up">
                     <h1>
                         <xsl:value-of select="/ProductDetail/Title" disable-output-escaping="yes"></xsl:value-of>
                     </h1>
                 </div>
-                <div class="timeline">
+                <div class="timeline" data-aos="fade-down">
                     <div class="icon-social">
                         <ul>
                             <li>
@@ -32,18 +32,18 @@
                     </div>
                 </div>
                 <div class="full-content">
-                    <div class="kv-desc">
+                    <div class="kv-desc" data-aos="fade-left">
                         <p>
                             <xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
                         </p>
                     </div>
                     <div class="kv-slide">
-                        <div class="swiper-container gallery-top">
+                        <div class="swiper-container gallery-top" data-aos="fade-right">
                             <div class="swiper-wrapper">
                                 <xsl:apply-templates select="/ProductDetail/ProductImages" mode="Top"></xsl:apply-templates>
                             </div>
                         </div>
-                        <div class="swiper-container-thumbs gallery-thumbs">
+                        <div class="swiper-container-thumbs gallery-thumbs" data-aos="fade-left">
                             <div class="swiper-wrapper">
                                 <xsl:apply-templates select="/ProductDetail/ProductImages" mode="Thumbs"></xsl:apply-templates>
                             </div>
@@ -51,8 +51,8 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-                    <div class="attribute">
-                        <div class="desc">
+                    <div class="attribute" data-aos="fade-down">
+                        <div class="desc" >
                             <xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                         <a class="btn btn-readmore">
@@ -65,14 +65,14 @@
                         <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
                         <em class="ri-arrow-down-s-line"></em>
                         </a>
-                        <table>
+                        <table data-aos="fade-up">
                             <xsl:apply-templates select="/ProductDetail/ProductAttributes"></xsl:apply-templates>
                         </table>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="project-other kv-section">
+        <div class="project-other kv-section" data-aos="fade-up">
             <div class="container">
                 <div class="attribute">
                     <p class="title">
